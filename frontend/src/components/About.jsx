@@ -79,7 +79,7 @@ const About = () => {
                 playsInline
                 className="w-full h-96 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
               >
-                <source src="https://cdn.pixabay.com/video/2022/12/12/143339-780252932_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/6224368/6224368-uhd_2560_1440_25fps.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </div>
