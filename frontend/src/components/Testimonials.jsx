@@ -61,22 +61,52 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Video Section */}
-        <div className="mt-20 max-w-4xl mx-auto">
+        {/* Video Section with Multiple Videos */}
+        <div className="mt-20 space-y-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">See How Couples Transform</h3>
             <p className="text-gray-600">Watch couples share their journey with Kaushal</p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto"
-            >
-              <source src="https://cdn.pixabay.com/video/2023/07/25/173332-850134632_large.mp4" type="video/mp4" />
-            </video>
+
+          {/* Main Video */}
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-2xl group">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+              >
+                <source src="https://cdn.pixabay.com/video/2021/03/28/69146-533267675_large.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          {/* Video Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-xl group">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+              >
+                <source src="https://cdn.pixabay.com/video/2022/07/11/123513-729570018_large.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl group">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+              >
+                <source src="https://cdn.pixabay.com/video/2019/02/16/21687-318196013_large.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>
