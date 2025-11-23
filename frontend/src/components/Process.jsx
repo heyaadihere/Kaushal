@@ -131,7 +131,7 @@ const Process = () => {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="https://cdn.pixabay.com/video/2019/08/01/25634-353034926_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/6893882/6893882-uhd_2560_1440_25fps.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </div>
