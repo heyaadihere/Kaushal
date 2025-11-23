@@ -114,7 +114,7 @@ const SuccessStories = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src="https://cdn.pixabay.com/video/2021/03/28/69146-533267675_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/3191158/3191158-uhd_2560_1440_25fps.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl">
