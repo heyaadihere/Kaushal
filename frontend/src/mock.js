@@ -38,7 +38,7 @@ export const servicesData = [
     subtitle: "Don't Just Plan a Wedding. Design Your Future.",
     description: "Build a solid foundation with clear agreements on finances, roles, and responsibilities. Start your partnership with transparency and mutual understanding.",
     icon: "Building2",
-    videoUrl: "https://cdn.pixabay.com/video/2021/08/11/85073-584533133_large.mp4"
+    videoUrl: "https://videos.pexels.com/video-files/7233822/7233822-uhd_2560_1440_25fps.mp4"
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ export const servicesData = [
     subtitle: "Master the Language of a Lasting Partnership.",
     description: "Learn proven communication strategies, conflict resolution techniques, and emotional intelligence tools to navigate challenges together with grace.",
     icon: "MessagesSquare",
-    videoUrl: "https://cdn.pixabay.com/video/2023/05/03/161043-823791984_large.mp4"
+    videoUrl: "https://videos.pexels.com/video-files/5533921/5533921-uhd_2560_1440_25fps.mp4"
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const servicesData = [
     subtitle: "Two Individuals. Two Families. One Harmonious Future.",
     description: "Navigate the complexities of merging families with structured conversations about boundaries, traditions, and shared expectations.",
     icon: "Users",
-    videoUrl: "https://cdn.pixabay.com/video/2022/06/07/119959-719845595_large.mp4"
+    videoUrl: "https://videos.pexels.com/video-files/6893882/6893882-uhd_2560_1440_25fps.mp4"
   }
 ];
 
