@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Logo = ({ className = "" }) => {
+const Logo = ({ className = "", isScrolled = true }) => {
   return (
     <Link to="/" className={`flex items-center gap-3 ${className}`}>
       <svg
