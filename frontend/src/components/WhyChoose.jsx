@@ -94,7 +94,7 @@ const WhyChoose = () => {
                 playsInline
                 className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
               >
-                <source src="https://cdn.pixabay.com/video/2021/05/01/73344-546206318_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/7235164/7235164-uhd_2560_1440_30fps.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
