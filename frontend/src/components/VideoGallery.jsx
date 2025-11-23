@@ -9,37 +9,37 @@ const VideoGallery = () => {
       id: 1,
       title: "Couple's First Session Experience",
       thumbnail: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&h=400&fit=crop",
-      videoUrl: "https://cdn.pixabay.com/video/2021/03/28/69146-533267675_large.mp4"
+      videoUrl: "https://videos.pexels.com/video-files/3191158/3191158-uhd_2560_1440_25fps.mp4"
     },
     {
       id: 2,
       title: "Financial Planning Workshop",
       thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
-      videoUrl: "https://cdn.pixabay.com/video/2022/07/11/123513-729570018_large.mp4"
+      videoUrl: "https://videos.pexels.com/video-files/7235200/7235200-uhd_2560_1440_25fps.mp4"
     },
     {
       id: 3,
       title: "Communication Skills Training",
       thumbnail: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop",
-      videoUrl: "https://cdn.pixabay.com/video/2021/05/01/73344-546206318_large.mp4"
+      videoUrl: "https://videos.pexels.com/video-files/7235164/7235164-uhd_2560_1440_30fps.mp4"
     },
     {
       id: 4,
       title: "Partnership Accord Signing",
       thumbnail: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop",
-      videoUrl: "https://cdn.pixabay.com/video/2022/12/12/143339-780252932_large.mp4"
+      videoUrl: "https://videos.pexels.com/video-files/6224368/6224368-uhd_2560_1440_25fps.mp4"
     },
     {
       id: 5,
       title: "Family Integration Session",
       thumbnail: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop",
-      videoUrl: "https://cdn.pixabay.com/video/2019/02/16/21687-318196013_large.mp4"
+      videoUrl: "https://videos.pexels.com/video-files/5531503/5531503-uhd_2560_1440_25fps.mp4"
     },
     {
       id: 6,
       title: "Success Story: Rohan & Amrita",
       thumbnail: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=400&fit=crop",
-      videoUrl: "https://cdn.pixabay.com/video/2023/07/25/173332-850134632_large.mp4"
+      videoUrl: "https://videos.pexels.com/video-files/8035058/8035058-uhd_2560_1440_25fps.mp4"
     }
   ];
 
