@@ -1,46 +1,86 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Logo = ({ className = "" }) => {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <Link to="/" className={`flex items-center gap-3 ${className}`}>
       <svg
-        width="48"
-        height="48"
-        viewBox="0 0 48 48"
+        width="56"
+        height="56"
+        viewBox="0 0 56 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="logo-icon"
       >
-        {/* Outer circle representing unity and wholeness */}
+        {/* Outer mandala-inspired circle representing wholeness */}
         <circle
-          cx="24"
-          cy="24"
-          r="22"
-          stroke="currentColor"
-          strokeWidth="2"
+          cx="28"
+          cy="28"
+          r="26"
+          stroke="url(#gradient1)"
+          strokeWidth="2.5"
           fill="none"
-          className="text-amber-600"
         />
         
-        {/* Two intertwined hearts representing partnership */}
-        <path
-          d="M16 18C13.5 18 12 19.5 12 21.5C12 24.5 15 27 18 29.5C19.5 30.5 21 31 24 34C27 31 28.5 30.5 30 29.5C33 27 36 24.5 36 21.5C36 19.5 34.5 18 32 18C30 18 28.5 19 28 20C27.5 19 26 18 24 18C22 18 20.5 19 20 20C19.5 19 18 18 16 18Z"
-          fill="currentColor"
-          className="text-amber-600"
+        {/* Inner decorative circle */}
+        <circle
+          cx="28"
+          cy="28"
+          r="20"
+          stroke="url(#gradient2)"
+          strokeWidth="1.5"
+          fill="none"
+          opacity="0.6"
         />
         
-        {/* Lotus petals at bottom representing growth and skill */}
+        {/* Stylized 'K' integrated with infinity symbol representing eternal partnership */}
         <path
-          d="M24 38C26 38 27.5 36.5 28 35C26.5 35.5 25 36 24 36C23 36 21.5 35.5 20 35C20.5 36.5 22 38 24 38Z"
-          fill="currentColor"
-          className="text-amber-700"
+          d="M 18 15 L 18 41 M 18 28 L 28 18 L 38 28 M 28 28 L 38 38"
+          stroke="url(#gradient3)"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
+        
+        {/* Lotus petals at the base representing growth and enlightenment */}
+        <path
+          d="M 20 42 Q 24 40 28 42 Q 32 40 36 42"
+          stroke="url(#gradient4)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          fill="none"
+        />
+        
+        {/* Small decorative dots representing skills/achievements */}
+        <circle cx="14" cy="28" r="1.5" fill="#d97706" />
+        <circle cx="42" cy="28" r="1.5" fill="#d97706" />
+        <circle cx="28" cy="14" r="1.5" fill="#d97706" />
+        
+        {/* Gradient definitions */}
+        <defs>
+          <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#d97706" />
+            <stop offset="100%" stopColor="#ea580c" />
+          </linearGradient>
+          <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f59e0b" />
+            <stop offset="100%" stopColor="#d97706" />
+          </linearGradient>
+          <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#b45309" />
+            <stop offset="100%" stopColor="#ea580c" />
+          </linearGradient>
+          <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f59e0b" />
+            <stop offset="100%" stopColor="#fbbf24" />
+          </linearGradient>
+        </defs>
       </svg>
       <div className="flex flex-col">
-        <span className="text-2xl font-bold tracking-tight text-gray-900">Kaushal</span>
-        <span className="text-xs tracking-wider text-amber-700 font-medium">IT'S A SKILL</span>
+        <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">Kaushal</span>
+        <span className="text-[10px] tracking-[0.2em] text-amber-600 font-semibold uppercase">Partnership Skills</span>
       </div>
-    </div>
+    </Link>
   );
 };
 
