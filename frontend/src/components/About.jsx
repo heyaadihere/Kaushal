@@ -68,26 +68,45 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right: Image/Video */}
+          {/* Right: Image/Video Gallery */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            {/* Main Video */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-96 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
               >
-                <source src="https://cdn.pixabay.com/video/2021/06/28/80149-570693986_large.mp4" type="video/mp4" />
+                <source src="https://cdn.pixabay.com/video/2022/12/12/143339-780252932_large.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </div>
 
+            {/* Small Image Grid */}
+            <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+                <img
+                  src="https://images.unsplash.com/photo-1594217523449-2f3b38e6d18c?w=400&h=300&fit=crop"
+                  alt="Couple consultation"
+                  className="w-full h-40 object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+                <img
+                  src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=400&h=300&fit=crop"
+                  alt="Partnership meeting"
+                  className="w-full h-40 object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            </div>
+
             {/* Floating Card */}
-            <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-2xl max-w-xs">
+            <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-2xl max-w-xs animate-bounce-in z-10">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-amber-700">15+</span>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-lg">
+                  <span className="text-2xl font-bold text-white">15+</span>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900">Years of Experience</p>
