@@ -82,18 +82,42 @@ const WhyChoose = () => {
           })}
         </div>
 
-        {/* Video Testimonial */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto"
-            >
-              <source src="https://cdn.pixabay.com/video/2022/03/29/112816-693990713_large.mp4" type="video/mp4" />
-            </video>
+        {/* Video Testimonial with Image Grid */}
+        <div className="mt-20 space-y-8">
+          {/* Main Video */}
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-2xl group">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+              >
+                <source src="https://cdn.pixabay.com/video/2021/05/01/73344-546206318_large.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          {/* Image Gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            {[
+              'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1529634806980-85c3dd6d54b4?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop'
+            ].map((img, index) => (
+              <div
+                key={index}
+                className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+              >
+                <img
+                  src={img}
+                  alt={`Couple ${index + 1}`}
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
