@@ -48,14 +48,16 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200 relative group ${
-                  location.pathname === link.path ? 'text-amber-600' : ''
-                }`}
+                className={`font-medium transition-colors duration-200 relative group ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-amber-600' 
+                    : 'text-white hover:text-amber-400'
+                } ${location.pathname === link.path ? (isScrolled ? 'text-amber-600' : 'text-amber-400') : ''}`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-amber-600 transition-all duration-300 ${
-                  location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
+                  isScrolled ? 'bg-amber-600' : 'bg-white'
+                } ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
             ))}
           </nav>
