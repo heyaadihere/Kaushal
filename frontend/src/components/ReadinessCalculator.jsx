@@ -111,6 +111,7 @@ const ReadinessCalculator = () => {
       color,
       icon
     });
+    setShowResult(true);
   };
 
   const isComplete = Object.keys(answers).length === questions.length;
