@@ -21,7 +21,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover scale-105"
         >
-          <source src="https://cdn.pixabay.com/video/2023/12/26/195231-899619095_large.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/8035058/8035058-uhd_2560_1440_25fps.mp4" type="video/mp4" />
         </video>
         {/* Enhanced Overlay with Animation */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-amber-900/60 to-gray-800/75"></div>
