@@ -52,14 +52,14 @@ const Header = () => {
                 key={link.name}
                 to={link.path}
                 className={`font-medium transition-colors duration-200 relative group ${
-                  isScrolled 
+                  isScrolled || !isHomePage
                     ? 'text-gray-700 hover:text-amber-600' 
                     : 'text-white hover:text-amber-400'
-                } ${location.pathname === link.path ? (isScrolled ? 'text-amber-600' : 'text-amber-400') : ''}`}
+                } ${location.pathname === link.path ? ((isScrolled || !isHomePage) ? 'text-amber-600' : 'text-amber-400') : ''}`}
               >
                 {link.name}
                 <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
-                  isScrolled ? 'bg-amber-600' : 'bg-white'
+                  isScrolled || !isHomePage ? 'bg-amber-600' : 'bg-white'
                 } ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
             ))}
