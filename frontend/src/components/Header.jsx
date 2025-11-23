@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Logo isScrolled={isScrolled} />
+            <Logo isScrolled={isScrolled || !isHomePage} />
           </div>
 
           {/* Desktop Navigation */}
