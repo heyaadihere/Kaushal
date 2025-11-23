@@ -119,12 +119,45 @@ const ReadinessCalculator = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Partnership Readiness Calculator</h2>
-          <p className="text-xl text-gray-600">Answer these questions to assess your pre-marital preparation</p>
+          <p className="text-xl text-gray-600 mb-8">Assess your pre-marital preparation in just 2 minutes</p>
+          
+          <div className="max-w-2xl mx-auto bg-white rounded-2xl p-10 shadow-xl border-2 border-amber-200">
+            <Calculator className="w-16 h-16 text-amber-600 mx-auto mb-6" />
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">How Ready Are You for Marriage?</h3>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Take our quick 12-question assessment to understand your partnership readiness and get personalized package recommendations.
+            </p>
+            <Button
+              onClick={() => setIsOpen(true)}
+              className="bg-amber-600 hover:bg-amber-700 text-white px-10 py-6 text-lg rounded-full font-semibold transition-all duration-300 hover:scale-105"
+            >
+              Start Assessment
+            </Button>
+          </div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* Modal */}
+        {isOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 overflow-y-auto">
+            <div className="bg-white rounded-2xl max-w-4xl w-full my-8 relative max-h-[90vh] overflow-y-auto">
+              <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between z-10">
+                <h3 className="text-2xl font-bold text-gray-900">Partnership Readiness Assessment</h3>
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setShowResult(false);
+                  }}
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="p-6">
+                {!showResult ? (
+                  <div className="max-w-3xl mx-auto">
           <div className="space-y-6 mb-8">
             {questions.map((q, index) => (
               <Card key={q.id} className="p-6 border-2 border-gray-200 hover:border-amber-300 transition-colors">
