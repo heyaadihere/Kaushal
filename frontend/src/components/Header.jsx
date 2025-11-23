@@ -8,6 +8,9 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  
+  // Check if we're on homepage
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
