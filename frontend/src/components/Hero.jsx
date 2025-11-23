@@ -45,11 +45,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/30 text-amber-200 text-sm font-medium mb-6">
+        <div className={`max-w-4xl mx-auto space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Badge with Animation */}
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/30 text-amber-200 text-sm font-medium mb-6 hover:scale-105 transition-transform cursor-pointer">
+            <Sparkles className="w-4 h-4 animate-pulse" />
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
             Modern Premarital Framework
+            <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
           </div>
 
           {/* Main Heading */}
