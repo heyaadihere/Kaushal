@@ -247,3 +247,8 @@ video {
 ::-webkit-scrollbar-thumb:hover {
   background: #b45309;
 }
+
+/* Hide Emergent badge */
+#emergent-badge {
+  display: none !important;
+}
