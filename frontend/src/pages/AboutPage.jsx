@@ -135,10 +135,32 @@ const AboutPage = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">See Our Approach in Action</h2>
               <p className="text-gray-600 text-lg">Watch how we guide couples through meaningful conversations</p>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <div className="rounded-2xl overflow-hidden shadow-2xl mb-12">
               <video autoPlay loop muted playsInline className="w-full">
                 <source src="https://cdn.pixabay.com/video/2021/08/23/86436-593466690_large.mp4" type="video/mp4" />
               </video>
+            </div>
+
+            {/* Image Gallery */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1529634806980-85c3dd6d54b4?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1594217523449-2f3b38e6d18c?w=400&h=400&fit=crop',
+                'https://images.unsplash.com/photo-1521791055366-0d553872125f?w=400&h=400&fit=crop'
+              ].map((img, index) => (
+                <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                  <img
+                    src={img}
+                    alt={`Couple ${index + 1}`}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
