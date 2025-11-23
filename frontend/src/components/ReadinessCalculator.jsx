@@ -158,51 +158,55 @@ const ReadinessCalculator = () => {
               <div className="p-6">
                 {!showResult ? (
                   <div className="max-w-3xl mx-auto">
-          <div className="space-y-6 mb-8">
-            {questions.map((q, index) => (
-              <Card key={q.id} className="p-6 border-2 border-gray-200 hover:border-amber-300 transition-colors">
-                <div className="mb-4">
-                  <span className="inline-block w-8 h-8 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center mr-3 float-left">
-                    {index + 1}
-                  </span>
-                  <p className="text-lg text-gray-900 font-medium pt-1">{q.question}</p>
-                </div>
-                <div className="flex gap-4 ml-11">
-                  <Button
-                    onClick={() => handleAnswer(q.id, 'yes')}
-                    variant={answers[q.id] === 'yes' ? 'default' : 'outline'}
-                    className={`flex-1 ${answers[q.id] === 'yes' ? 'bg-green-600 hover:bg-green-700' : ''}`}
-                  >
-                    <CheckCircle className="w-4 h-4 mr-2" />
-                    Yes
-                  </Button>
-                  <Button
-                    onClick={() => handleAnswer(q.id, 'no')}
-                    variant={answers[q.id] === 'no' ? 'default' : 'outline'}
-                    className={`flex-1 ${answers[q.id] === 'no' ? 'bg-gray-600 hover:bg-gray-700' : ''}`}
-                  >
-                    <XCircle className="w-4 h-4 mr-2" />
-                    No
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
+                    <div className="space-y-4 mb-8">
+                      {questions.map((q, index) => (
+                        <Card key={q.id} className="p-4 border-2 border-gray-200 hover:border-amber-300 transition-colors">
+                          <div className="mb-3">
+                            <span className="inline-block w-7 h-7 rounded-full bg-amber-100 text-amber-700 font-bold text-sm flex items-center justify-center mr-2 float-left">
+                              {index + 1}
+                            </span>
+                            <p className="text-gray-900 font-medium">{q.question}</p>
+                          </div>
+                          <div className="flex gap-3 ml-9">
+                            <Button
+                              onClick={() => handleAnswer(q.id, 'yes')}
+                              variant={answers[q.id] === 'yes' ? 'default' : 'outline'}
+                              className={`flex-1 ${answers[q.id] === 'yes' ? 'bg-green-600 hover:bg-green-700' : ''}`}
+                              size="sm"
+                            >
+                              <CheckCircle className="w-4 h-4 mr-1" />
+                              Yes
+                            </Button>
+                            <Button
+                              onClick={() => handleAnswer(q.id, 'no')}
+                              variant={answers[q.id] === 'no' ? 'default' : 'outline'}
+                              className={`flex-1 ${answers[q.id] === 'no' ? 'bg-gray-600 hover:bg-gray-700' : ''}`}
+                              size="sm"
+                            >
+                              <XCircle className="w-4 h-4 mr-1" />
+                              No
+                            </Button>
+                          </div>
+                        </Card>
+                      ))}
+                    </div>
 
-          <div className="text-center mb-8">
-            <Button
-              onClick={calculateReadiness}
-              disabled={!isComplete}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-12 py-6 text-lg rounded-full font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Calculate My Readiness Score
-            </Button>
-            {!isComplete && (
-              <p className="text-gray-500 mt-4">Please answer all questions to see your results</p>
-            )}
-          </div>
-
-          {result && (
+                    <div className="text-center">
+                      <Button
+                        onClick={calculateReadiness}
+                        disabled={!isComplete}
+                        className="bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 text-lg rounded-full font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        Calculate My Readiness Score
+                      </Button>
+                      {!isComplete && (
+                        <p className="text-gray-500 mt-4 text-sm">Please answer all questions to see your results</p>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="max-w-2xl mx-auto">
+                    {result && (
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border-2 border-amber-200 animate-slide-up">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white shadow-lg mb-6">
