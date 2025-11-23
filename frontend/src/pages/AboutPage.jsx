@@ -137,7 +137,7 @@ const AboutPage = () => {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl mb-12">
               <video autoPlay loop muted playsInline className="w-full">
-                <source src="https://cdn.pixabay.com/video/2021/08/23/86436-593466690_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/7235164/7235164-uhd_2560_1440_30fps.mp4" type="video/mp4" />
               </video>
             </div>
 
