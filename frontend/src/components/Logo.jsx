@@ -77,8 +77,14 @@ const Logo = ({ className = "", isScrolled = true }) => {
         </defs>
       </svg>
       <div className="flex flex-col">
-        <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">Kaushal</span>
-        <span className="text-[10px] tracking-[0.2em] text-amber-600 font-semibold uppercase">Partnership Skills</span>
+        <span className={`text-2xl font-bold tracking-tight transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent' 
+            : 'text-white'
+        }`}>Kaushal</span>
+        <span className={`text-[10px] tracking-[0.2em] font-semibold uppercase transition-colors duration-300 ${
+          isScrolled ? 'text-amber-600' : 'text-amber-300'
+        }`}>Partnership Skills</span>
       </div>
     </Link>
   );
