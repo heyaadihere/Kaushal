@@ -1,9 +1,15 @@
-import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Play, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 import { heroData } from '../mock';
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
@@ -13,12 +19,28 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
         >
-          <source src={heroData.videoUrl} type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2023/12/26/195231-899619095_large.mp4" type="video/mp4" />
         </video>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-amber-900/60"></div>
+        {/* Enhanced Overlay with Animation */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-amber-900/60 to-gray-800/75"></div>
+        
+        {/* Animated Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(30)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-amber-400/40 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${5 + Math.random() * 5}s`
+              }}
+            ></div>
+          ))}
+        </div>
       </div>
 
       {/* Content */}
