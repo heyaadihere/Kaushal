@@ -84,26 +84,23 @@ const Header = () => {
           <div className="lg:hidden bg-white border-t border-gray-200 py-4 mb-4 rounded-b-xl shadow-xl">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.path}
-                  onClick={(e) => scrollToSection(e, link.path)}
-                  className="text-gray-700 hover:text-amber-600 font-medium px-4 py-2 transition-colors"
+                  to={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-gray-700 hover:text-amber-600 font-medium px-4 py-2 transition-colors ${
+                    location.pathname === link.path ? 'text-amber-600 bg-amber-50' : ''
+                  }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <Button
-                onClick={() => {
-                  const element = document.querySelector('#contact');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
-                  setIsMobileMenuOpen(false);
-                }}
-                className="bg-amber-600 hover:bg-amber-700 text-white mx-4 py-2 rounded-full font-medium"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Book Consultation
-              </Button>
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="bg-amber-600 hover:bg-amber-700 text-white mx-4 py-2 rounded-full font-medium">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Book Consultation
+                </Button>
+              </Link>
             </nav>
           </div>
         )}
