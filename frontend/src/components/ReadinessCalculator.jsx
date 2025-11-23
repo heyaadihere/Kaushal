@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
-import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { CheckCircle, XCircle, AlertCircle, Calculator, X } from 'lucide-react';
 
 const ReadinessCalculator = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [answers, setAnswers] = useState({});
   const [result, setResult] = useState(null);
+  const [showResult, setShowResult] = useState(false);
 
   const questions = [
     {
