@@ -93,7 +93,7 @@ const Testimonials = () => {
                 playsInline
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               >
-                <source src="https://cdn.pixabay.com/video/2022/07/11/123513-729570018_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/7235200/7235200-uhd_2560_1440_25fps.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl group">
