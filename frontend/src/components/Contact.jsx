@@ -187,7 +187,7 @@ const Contact = () => {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="https://cdn.pixabay.com/video/2024/01/09/196528-902693405_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/8035058/8035058-uhd_2560_1440_25fps.mp4" type="video/mp4" />
               </video>
             </div>
 
