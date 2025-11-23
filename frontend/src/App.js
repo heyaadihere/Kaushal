@@ -1,21 +1,21 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import AnimatedStats from "./components/AnimatedStats";
-import WhyChoose from "./components/WhyChoose";
-import Services from "./components/Services";
-import Process from "./components/Process";
-import Packages from "./components/Packages";
-import Testimonials from "./components/Testimonials";
-import Team from "./components/Team";
-import FAQ from "./components/FAQ";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import { Toaster } from "./components/ui/sonner";
+
+// Pages
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
+import PackagesPage from "./pages/PackagesPage";
+import PackageDetailPage from "./pages/PackageDetailPage";
+import TeamPage from "./pages/TeamPage";
+import FAQPage from "./pages/FAQPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
@@ -23,17 +23,17 @@ function App() {
       <div className="App">
         <Header />
         <main>
-          <Hero />
-          <About />
-          <AnimatedStats />
-          <WhyChoose />
-          <Services />
-          <Process />
-          <Packages />
-          <Testimonials />
-          <Team />
-          <FAQ />
-          <Contact />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:id" element={<ServiceDetailPage />} />
+            <Route path="/packages" element={<PackagesPage />} />
+            <Route path="/packages/:id" element={<PackageDetailPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
         </main>
         <Footer />
         <FloatingCTA />
