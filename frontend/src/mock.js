@@ -4,7 +4,7 @@ export const heroData = {
   title: "The Partnership Accord by Kaushal",
   subtitle: "Kaushal - It's a Skill!",
   description: "A modern premarital framework that emphasizes equality, communication, and shared responsibility – essentially your own 'Marital Charter'",
-  videoUrl: "https://cdn.pixabay.com/video/2022/11/13/138965-771113268_large.mp4"
+  videoUrl: "https://videos.pexels.com/video-files/8035058/8035058-uhd_2560_1440_25fps.mp4"
 };
 
 export const aboutData = {
