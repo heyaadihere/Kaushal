@@ -19,23 +19,13 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '#about' },
-    { name: 'Services', path: '#services' },
-    { name: 'Packages', path: '#packages' },
-    { name: 'FAQ', path: '#faq' },
-    { name: 'Contact', path: '#contact' }
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Packages', path: '/packages' },
+    { name: 'Team', path: '/team' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' }
   ];
-
-  const scrollToSection = (e, path) => {
-    if (path.startsWith('#')) {
-      e.preventDefault();
-      const element = document.querySelector(path);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setIsMobileMenuOpen(false);
-      }
-    }
-  };
 
   return (
     <header
