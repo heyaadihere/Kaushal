@@ -45,15 +45,18 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.path}
-                onClick={(e) => scrollToSection(e, link.path)}
-                className="text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200 relative group"
+                to={link.path}
+                className={`text-gray-700 hover:text-amber-600 font-medium transition-colors duration-200 relative group ${
+                  location.pathname === link.path ? 'text-amber-600' : ''
+                }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-amber-600 transition-all duration-300 ${
+                  location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </Link>
             ))}
           </nav>
 
