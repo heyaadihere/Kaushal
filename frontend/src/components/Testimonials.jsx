@@ -104,7 +104,7 @@ const Testimonials = () => {
                 playsInline
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               >
-                <source src="https://cdn.pixabay.com/video/2019/02/16/21687-318196013_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/5531503/5531503-uhd_2560_1440_25fps.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
