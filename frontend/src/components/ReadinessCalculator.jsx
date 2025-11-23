@@ -207,31 +207,51 @@ const ReadinessCalculator = () => {
                 ) : (
                   <div className="max-w-2xl mx-auto">
                     {result && (
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border-2 border-amber-200 animate-slide-up">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white shadow-lg mb-6">
-                  {React.createElement(result.icon, { className: `w-12 h-12 ${result.color}` })}
-                </div>
-                <div className={`text-6xl font-bold ${result.color} mb-4`}>
-                  {Math.round(result.percentage)}%
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Your Readiness Score</h3>
-                <p className="text-xl text-gray-700 mb-6">{result.recommendation}</p>
-              </div>
+                      <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-200 animate-slide-up">
+                        <div className="text-center mb-6">
+                          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-lg mb-4">
+                            {React.createElement(result.icon, { className: `w-10 h-10 ${result.color}` })}
+                          </div>
+                          <div className={`text-5xl font-bold ${result.color} mb-3`}>
+                            {Math.round(result.percentage)}%
+                          </div>
+                          <h3 className="text-2xl font-bold text-gray-900 mb-3">Your Readiness Score</h3>
+                          <p className="text-lg text-gray-700">{result.recommendation}</p>
+                        </div>
 
-              <div className="bg-white rounded-xl p-8 border border-amber-200">
-                <h4 className="text-xl font-bold text-gray-900 mb-4">Our Recommendation:</h4>
-                <p className="text-lg text-gray-700 mb-6">{result.packageSuggestion}</p>
-                <Button
-                  onClick={() => window.location.href = '/packages'}
-                  className="w-full bg-amber-600 hover:bg-amber-700 text-white py-4 rounded-full font-semibold"
-                >
-                  View Our Packages
-                </Button>
+                        <div className="bg-white rounded-xl p-6 border border-amber-200">
+                          <h4 className="text-lg font-bold text-gray-900 mb-3">Our Recommendation:</h4>
+                          <p className="text-gray-700 mb-4">{result.packageSuggestion}</p>
+                          <div className="flex gap-3">
+                            <Button
+                              onClick={() => {
+                                window.location.href = '/packages';
+                              }}
+                              className="flex-1 bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-full font-semibold"
+                            >
+                              View Packages
+                            </Button>
+                            <Button
+                              onClick={() => {
+                                setAnswers({});
+                                setShowResult(false);
+                                setResult(null);
+                              }}
+                              variant="outline"
+                              className="flex-1 py-3 rounded-full font-semibold"
+                            >
+                              Retake Assessment
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
