@@ -38,9 +38,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <Logo />
-          </Link>
+          <div className="flex-shrink-0">
+            <Logo isScrolled={isScrolled} />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
