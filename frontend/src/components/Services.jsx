@@ -66,7 +66,7 @@ const Services = () => {
                   </Button>
                 </div>
 
-                {/* Video */}
+                {/* Video with Enhanced Effects */}
                 <div className={`relative ${!isEven ? 'lg:order-1' : ''}`}>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                     <video
@@ -74,17 +74,27 @@ const Services = () => {
                       loop
                       muted
                       playsInline
-                      className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                     >
                       <source src={service.videoUrl} type="video/mp4" />
                     </video>
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent group-hover:from-gray-900/40 transition-colors"></div>
+                    
+                    {/* Overlay Text on Hover */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-center text-white p-6">
+                        <p className="text-lg font-semibold">{service.subtitle}</p>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Floating Badge */}
-                  <div className="absolute -top-4 -right-4 bg-amber-600 text-white px-6 py-3 rounded-full shadow-lg font-semibold">
+                  {/* Animated Floating Badge */}
+                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-3 rounded-full shadow-2xl font-semibold animate-bounce-in hover:scale-110 transition-transform">
                     Service {service.id}
                   </div>
+
+                  {/* Decorative Circle */}
+                  <div className={`absolute ${isEven ? '-left-8 top-1/2' : '-right-8 top-1/2'} w-24 h-24 bg-amber-200/30 rounded-full blur-2xl`}></div>
                 </div>
               </div>
             );
