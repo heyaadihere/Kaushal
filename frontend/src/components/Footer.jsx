@@ -119,9 +119,22 @@ const Footer = () => {
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} Kaushal - It's a Skill. All rights reserved. Crafted with care for lasting partnerships.
-            </p>
+            <div className="text-center md:text-left">
+              <p className="text-gray-400 text-sm mb-2">
+                © {currentYear} Kaushal - It's a Skill. All rights reserved. Crafted with care for lasting partnerships.
+              </p>
+              <p className="text-gray-500 text-xs">
+                Website powered by{' '}
+                <a 
+                  href="https://techbooktechnologies.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-amber-500 hover:text-amber-400 transition-colors font-medium"
+                >
+                  Techbook Technologies
+                </a>
+              </p>
+            </div>
             
             {/* Social Links */}
             <div className="flex items-center gap-4">
