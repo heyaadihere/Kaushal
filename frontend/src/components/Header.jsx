@@ -62,16 +62,12 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button
-              onClick={() => {
-                const element = document.querySelector('#contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Book Consultation
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Phone className="w-4 h-4 mr-2" />
+                Book Consultation
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
