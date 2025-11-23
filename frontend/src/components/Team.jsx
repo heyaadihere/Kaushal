@@ -74,7 +74,7 @@ const Team = () => {
               playsInline
               className="w-full h-auto"
             >
-              <source src="https://cdn.pixabay.com/video/2020/03/23/34200-404011930_large.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/7233822/7233822-uhd_2560_1440_25fps.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
