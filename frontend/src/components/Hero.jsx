@@ -69,14 +69,14 @@ const Hero = () => {
             {heroData.description}
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with 3D Effect */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button
               onClick={() => {
                 const element = document.querySelector('#packages');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg rounded-full font-semibold shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-105 group"
+              className="button-3d bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg rounded-full font-semibold shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-105 group"
             >
               Explore Our Programs
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -87,7 +87,7 @@ const Hero = () => {
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg rounded-full font-semibold backdrop-blur-md transition-all duration-300 hover:scale-105 group"
+              className="button-3d border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg rounded-full font-semibold backdrop-blur-md transition-all duration-300 hover:scale-105 group"
             >
               <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
               Learn More
