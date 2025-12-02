@@ -35,6 +35,8 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blogs" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogDetailPage />} />
           </Routes>
         </main>
         <Footer />
