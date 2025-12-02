@@ -186,14 +186,14 @@ const AboutPage = () => {
             {/* Image Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1529634806980-85c3dd6d54b4?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1594217523449-2f3b38e6d18c?w=400&h=400&fit=crop',
-                'https://images.unsplash.com/photo-1521791055366-0d553872125f?w=400&h=400&fit=crop'
+                'https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+                'https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop'
               ].map((img, index) => (
                 <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
                   <img
