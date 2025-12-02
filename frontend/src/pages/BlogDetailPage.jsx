@@ -39,6 +39,14 @@ const BlogDetailPage = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  if (loading) {
+    return (
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Loading article...</div>
+      </div>
+    );
+  }
+
   if (!post) {
     return (
       <div className="pt-20 min-h-screen flex items-center justify-center">
