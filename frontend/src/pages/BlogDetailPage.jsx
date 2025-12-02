@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag, Share2, BookOpen } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { getBlogPost, getRelatedPosts } from '../blogData';
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
