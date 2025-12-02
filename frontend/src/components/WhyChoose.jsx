@@ -102,10 +102,10 @@ const WhyChoose = () => {
           {/* Image Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
-              'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1529634806980-85c3dd6d54b4?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop'
+              'https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+              'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+              'https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+              'https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop'
             ].map((img, index) => (
               <div
                 key={index}
