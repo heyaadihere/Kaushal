@@ -8,7 +8,7 @@ const SuccessStories = () => {
       names: "Priya & Aditya",
       location: "Mumbai, Maharashtra",
       marriageYear: "2023",
-      image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=600&fit=crop",
+      image: "https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
       story: "We came to Kaushal with completely different expectations about finances and career. Through the Sammati program, we discovered how to honor both our ambitions while building something together. The Partnership Accord has been our north star through every major decision.",
       package: "Sammati (5 Sessions)",
       highlight: "Created a 5-year financial roadmap together"
