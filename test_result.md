@@ -137,6 +137,9 @@ frontend:
         - working: true
           agent: "testing"
           comment: "PASSED: Blog detail pages fully functional. Hero image displays correctly with overlay. Article title, category badge (Partnership), and metadata (date: December 1, 2024, read time: 12 min read, author: By Kaushal Team) all present. 'Back to Blog' button works correctly. Article excerpt in highlighted box displays properly. Full article content renders correctly. Author card with 'Written by Kaushal Team' appears at bottom. Related articles section shows 3 articles correctly excluding current article. CTA section present."
+        - working: true
+          agent: "testing"
+          comment: "NEW ARTICLES TESTING PASSED: All 5 new article detail pages working perfectly. Tested 'Why Marriage Is a Skill' (Partnership category, Nov 8, 2024, 14 min read), 'Conflict Doesn't Mean Failure' (Communication category, Nov 18, 2024, 15 min read), and 'Digital Age Relationship Challenges' (Modern Relationships category, Nov 10, 2024, 13 min read). All articles display correct hero images, titles, category badges, metadata, content, and related articles section. Navigation between articles and back to blog listing works correctly. No console errors detected."
 
   - task: "Blog category filtering"
     implemented: true
