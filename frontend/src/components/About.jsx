@@ -86,16 +86,16 @@ const About = () => {
 
             {/* Small Image Grid */}
             <div className="grid grid-cols-2 gap-4 mt-6">
-              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <img
-                  src="https://images.unsplash.com/photo-1594217523449-2f3b38e6d18c?w=400&h=300&fit=crop"
+                  src="https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                   alt="Couple consultation"
                   className="w-full h-40 object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <img
-                  src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=400&h=300&fit=crop"
+                  src="https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                   alt="Partnership meeting"
                   className="w-full h-40 object-cover hover:scale-110 transition-transform duration-500"
                 />
