@@ -18,7 +18,7 @@ const SuccessStories = () => {
       names: "Rohan & Meera",
       location: "Bangalore, Karnataka",
       marriageYear: "2022",
-      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&h=600&fit=crop",
+      image: "https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
       story: "Coming from very different family backgrounds, we struggled with how to set boundaries with extended family. The Family Integration Strategy helped us create clear, respectful boundaries while honoring our cultural roots. Two years later, we've never been happier.",
       package: "Family Integration Strategy",
       highlight: "Harmoniously merged two different family traditions"
