@@ -188,6 +188,8 @@ test_plan:
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
+  new_articles_tested: true
+  total_articles_verified: 10
 
 agent_communication:
     - agent: "testing"
