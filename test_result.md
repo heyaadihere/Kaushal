@@ -155,6 +155,9 @@ frontend:
         - working: true
           agent: "testing"
           comment: "PASSED: Category filtering works perfectly. All 6 categories present (All, Partnership, Finance, Family Dynamics, Communication, Career & Growth). Finance filter shows 1 article (Money Talks), Family Dynamics shows 1 article. Featured article section correctly hides when filtering and shows when returning to 'All'. Filter buttons have proper active states with amber highlighting."
+        - working: true
+          agent: "testing"
+          comment: "UPDATED FILTERING PASSED: All 9 category filters now working perfectly. NEW categories tested: Intimacy & Boundaries (1 article - 'Intimacy, Boundaries & Expectations'), Life Transitions (1 article - 'Life Transitions: How to Stay Aligned'), Modern Relationships (1 article - 'Digital Age Relationship Challenges'). UPDATED categories tested: Communication (2 articles including new 'Conflict Doesn't Mean Failure'), Partnership (2 articles including new 'Why Marriage Is a Skill'). All filters show correct article counts and proper active states. Featured article section behavior unchanged."
 
   - task: "Blog navigation and routing"
     implemented: true
