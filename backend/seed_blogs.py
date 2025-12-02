@@ -1,0 +1,312 @@
+import asyncio
+from motor.motor_asyncio import AsyncIOMotorClient
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+from datetime import datetime, timezone
+
+ROOT_DIR = Path(__file__).parent
+load_dotenv(ROOT_DIR / '.env')
+
+MONGO_URL = os.environ['MONGO_URL']
+
+# All 10 blogs with FULL content extracted from PDFs
+blogs_data = [
+    {
+        "id": 1,
+        "slug": "pre-marital-partnership-accord",
+        "title": "Why a Pre-Marital Partnership Accord is More Relevant Than Ever",
+        "excerpt": "Marriage today isn't what it was even 10 or 15 years ago. We have dual incomes, EMIs, live-in relationships, blended families, and yet, most couples still walk into marriage with nothing more than 'we'll figure it out' as a plan.",
+        "author": "Kaushal Team",
+        "date": "December 1, 2024",
+        "readTime": "12 min read",
+        "category": "Partnership",
+        "image": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
+        "content": """Marriage today isn't what it was even 10 or 15 years ago.
+We have dual incomes, EMIs, live-in relationships, blended families, remote work, global mobility, and yet, most couples still walk into marriage with nothing more than "we'll figure it out" as a plan.
+
+As someone who thinks of relationships as a skill (not just a feeling), I can tell you this:
+"We'll see when it comes" is not a strategy. It's a gamble.
+
+That's exactly where a Pre-Marital Partnership Accord comes in.
+
+In this article, I want to walk you through:
+• What a Partnership Accord actually is (in simple language)
+• Why it's especially relevant in today's world
+• Real-life style stories of couples (anonymous) who found clarity through these conversations
+
+What is a "Partnership Accord" really?
+
+Think of a Partnership Accord as your Relationship Playbook - co-created by both partners before or early in the marriage.
+
+It's a written, human, non-legalistic document that captures your shared understanding on things like:
+• How you'll talk about money- savings, spending, joint vs separate accounts
+• What roles and responsibilities at home will look like
+• How you want to handle conflict when (not if) it arises
+• Your expectations around intimacy and emotional support
+• How you'll set boundaries with families
+• Big-picture decisions: kids, relocation, career changes, lifestyle
+
+At TheKaushal.in, I often describe it as your "Relationship Constitution" - a framework that turns vague hopes like "we'll support each other" into specific, lived agreements like:
+
+"If one of us gets an overseas opportunity, we'll discuss the impact on finances, families, and careers, and make a 3-5 year plan together instead of reacting in the moment."
+
+This is not a cold legal prenup focused only on assets and divorce.
+It's a living, humane agreement on how you want to be partners in daily life.
+
+Why is this especially relevant now?
+
+Our parents' model of marriage doesn't fully match our lives today.
+
+We're navigating:
+• Dual-career marriages
+• Fluid gender roles
+• Blended families and second marriages
+• Remote/hybrid work
+• Cross-cultural and inter-state relationships
+• Digital finances, side hustles, and global opportunities
+
+Yet the conversations many couples have before marriage are still about weddings, holidays, house décor, and "we'll manage somehow."
+
+A Partnership Accord is not about assuming the worst. It's about consciously designing the best possible version of your life together.
+
+Let's look at how today's trends make this essential.
+
+1. Changing roles: Beyond "husband does this, wife does that"
+
+Earlier, one person earned, one person ran the home. Today, both partners are often working, both have ambitions - but the invisible scripts from childhood are still there.
+
+Questions like:
+• Who cooks? Who cleans?
+• Who handles parents' doctor visits?
+• Who takes a step back from work if needed?
+
+Riya & Karan - "We didn't realise our defaults were so different"
+
+Riya and Karan, both in their late 20s, came in convinced they were "on the same page". During a guided session, I asked each to privately list who they imagined would do what at home.
+
+Riya assumed:
+• Cooking, groceries - shared
+• Cleaning - outsourced
+• Finances - Karan leads, she stays involved
+• Festivals - evenly split between both families
+
+Karan unconsciously wrote:
+• Cooking and daily home management - "mostly Riya"
+• Finances - "me"
+• Parents' doctor visits - "whoever is free"
+• Festivals - "primarily my family"
+
+No one was trying to be unfair. They were just running on unspoken expectations.
+
+Through structured conversation, they moved from assumptions to agreements. Their Accord now includes:
+• A clear division of weekly chores
+• A shared calendar for responsibilities
+• A rule to review any one-sided load after 3 months
+
+Riya later said, "If we hadn't done this, I'd have resented him without knowing how to explain why."
+
+2. Dual-career marriages: Ambition, burnout, and fairness
+
+Two careers mean more income and more dreams but also more negotiation:
+• Whose career takes priority during relocation?
+• Is one job "optional" while the other is "serious"?
+• How do you prevent quiet resentment?
+
+Mehul & Tara - "We didn't want to become competitors in our own home"
+
+Mehul worked in consulting; Tara was a doctor. Both had demanding schedules and real ambition. Their biggest fear? That one would feel sidelined to support the other.
+
+In their Partnership Accord, they wrote down:
+• A "no big decisions alone" rule - no accepting outstation or international roles without joint discussion
+• A 3-year view: whose career needs extra focus right now, and what practical support that requires
+• A commitment to rebalance every 18-24 months, so sacrifice doesn't always fall on the same person
+• A simple financial plan that would eventually allow more flexibility in work choices
+
+Instead of silently wondering, "Will my growth damage our relationship?" they left with a shared understanding: "We're building two careers and one life - together."
+
+3. Blended families: Past stories, new beginnings
+
+Second marriages, step-children, and complex family histories make emotional boundaries more important, not less.
+
+Tough but necessary questions:
+• What contact with ex-partners is comfortable and respectful?
+• What role does each partner play in step-parenting?
+• How do we handle finances, school fees, and inheritance discussions?
+
+Ananya & Prakash - "We wanted love to feel safe, not fragile"
+
+Ananya (with a 9-year-old son) and Prakash (never married) were deeply committed, but nervous. Ananya had gone through a painful divorce. Prakash didn't want to overstep or become "the outsider" in their small family.
+
+In their Accord, they explored:
+• How and when to introduce Prakash to her son
+• The tone and limits of conversations with Ananya's ex
+• Who pays for what now, and how future savings are structured
+• How they'll speak about the child's other parent at home (respectfully, even if there's hurt)
+
+They even wrote a line that stayed with me:
+"This family has a past, but we won't let old wounds decide the mood of our new home."
+
+Their Accord became both a boundary and a bridge.
+
+4. Remote work, relocation, and "Where will we live?"
+
+Remote and hybrid work were supposed to give us freedom... and they did. But they also brought confusion.
+• One partner can "work from anywhere" - but where is anywhere?
+• Whose parents do you live near?
+• What if the company suddenly calls everyone back to office?
+
+Ayaan & Zara - "Zoom made us a couple; location almost broke us"
+
+Ayaan (remote tech job) and Zara (policy role in Delhi) met online and dated long-distance. Ayaan assumed: "Great, I can live near my parents in Jaipur and travel as needed."
+Zara assumed: "Obviously, we'll build our life in Delhi. That's where my work is."
+
+Their Accord helped them get specific:
+• They chose a primary city for the first 3 years (Delhi)
+• They planned how often they'd visit each family
+• They added a clause: if Ayaan's role ever demands office presence, they'll revisit the plan before saying yes
+
+They walked away feeling they weren't just "in love"; they were co-planning a life.
+
+5. Money in the digital age: Transparency and trust
+
+UPI, mutual funds, ESOPs, crypto, freelance gigs - money isn't just salary anymore. With that come:
+• Hidden debts or old loans
+• Different risk appetites
+• Emotional triggers around spending and saving
+
+A Partnership Accord creates safe space for uncomfortable truths:
+• "I have a loan of X, and this is how I feel about it."
+• "I need at least 6 months of expenses as a safety net to feel calm."
+• "I'm okay with higher-risk investments, but only with this percentage of our money."
+
+The goal isn't to control each other. It's to align on a financial philosophy: safety, risk, lifestyle, and long-term goals.
+
+"Isn't this unromantic?"
+
+This is the most common objection.
+
+But think about it: we obsess over guest lists, outfits, décor, photographers, and menus. We plan the wedding to the last detail.
+
+The marriage? That we leave to luck.
+
+A Partnership Accord does not mean:
+• You're planning for divorce
+• You don't trust your partner
+• You're turning love into a transaction
+
+It does mean:
+• You respect each other enough to be honest
+• You care enough to create structure for your relationship
+• You understand that love is deepened by clarity, not threatened by it
+
+Many couples tell me after these sessions:
+"We've never talked this openly - not in all our years of dating."
+
+The process itself becomes an act of intimacy.
+
+What actually goes into a Pre-Marital Partnership Accord?
+
+Every couple's version is different, but most Accords cover:
+
+1. Shared Values & Vision
+  • What does a good life look like for us?
+  • What kind of couple do we want to be?
+
+2. Finances
+  • Income transparency
+  • Joint vs separate accounts
+  • Savings, investments, loans, big purchases
+
+3. Roles & Responsibilities
+  • Housework and home management
+  • Who handles what by default, and how often you'll revisit it
+
+4. Careers & Growth
+  • How you'll support each other's ambitions
+  • How you'll decide about relocations, breaks, or job switches
+
+5. Families & Boundaries
+  • Expectations from parents and in-laws
+  • Festivals, visits, caregiving responsibilities
+
+6. Conflict & Communication
+  • How you fight - and how you repair
+  • What's off-limits (name-calling, silent treatment, etc.)
+
+7. Intimacy & Emotional Needs
+  • Love languages, alone-time vs together-time
+  • What makes each of you feel supported
+
+8. Big Life Choices
+  • Children or no children, and when
+  • City vs smaller town, renting vs buying, lifestyle preferences
+
+It sounds like a lot on paper, but in real life, it unfolds as a series of deeper, sometimes vulnerable conversations - captured in a format you can return to and evolve.
+
+Why guided facilitation helps
+
+Could you do this entirely on your own? Maybe.
+Will most couples actually manage it, without defensiveness or avoidance? Usually not.
+
+A neutral facilitator helps by:
+• Asking the questions you didn't know you needed
+• Keeping the space calm when things get emotional
+• Helping you express fear or insecurity without blame
+• Making sure both partners feel equally seen and heard
+
+By the end, you don't just have a document. You have practice in talking about hard topics with care.
+
+A wiser way to begin
+
+A Pre-Marital Partnership Accord is not about controlling life. Life will still surprise you with illness, success, babies, job losses, relocations, and random curveballs.
+
+But when those moments come, you'll already have:
+• A shared language
+• A reference point
+• A sense that you're on the same team
+
+Instead of:
+"You never told me this is what you expected."
+
+You'll be able to say:
+"We talked about this once. Our life has changed - let's update our Accord."
+
+Whether you're engaged, seriously dating, newly married, or in a long-term partnership that has mostly been improvisation till now - it's not too late.
+
+You can still sit down together and say:
+"Let's design this partnership with intention. Not as a guess, not as a default - but as a skill we'll grow together."
+
+That's what a Pre-Marital Partnership Accord really is:
+Not a legal formality, not a doomsday plan - but a quiet, powerful way to protect the love you're building.""",
+        "created_at": datetime.now(timezone.utc),
+        "updated_at": datetime.now(timezone.utc)
+    }
+]
+
+async def seed_blogs():
+    client = AsyncIOMotorClient(MONGO_URL)
+    db = client.kaushal_db
+    
+    try:
+        # Clear existing blogs
+        await db.blogs.delete_many({})
+        print("Cleared existing blogs")
+        
+        # Insert all blogs
+        result = await db.blogs.insert_many(blogs_data)
+        print(f"Successfully inserted {len(result.inserted_ids)} blog posts")
+        
+        # Verify
+        count = await db.blogs.count_documents({})
+        print(f"Total blogs in database: {count}")
+        
+    except Exception as e:
+        print(f"Error seeding blogs: {e}")
+    finally:
+        client.close()
+
+if __name__ == "__main__":
+    print("Starting blog seeding...")
+    asyncio.run(seed_blogs())
+    print("Blog seeding complete!")
