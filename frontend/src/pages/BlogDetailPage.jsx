@@ -5,11 +5,37 @@ import { Button } from '../components/ui/button';
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
-  const post = getBlogPost(slug);
-  const relatedPosts = getRelatedPosts(slug, 3);
+  const [post, setPost] = useState(null);
+  const [relatedPosts, setRelatedPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Scroll to top on mount
+  // Fetch blog post and related posts
   useEffect(() => {
+    const fetchBlogData = async () => {
+      try {
+        // Fetch main blog post
+        const postResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/blogs/${slug}`);
+        const postData = await postResponse.json();
+        
+        if (postData.success) {
+          setPost(postData.blog);
+          
+          // Fetch related posts
+          const relatedResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/blogs/related/${slug}?limit=3`);
+          const relatedData = await relatedResponse.json();
+          
+          if (relatedData.success) {
+            setRelatedPosts(relatedData.blogs);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching blog:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchBlogData();
     window.scrollTo(0, 0);
   }, [slug]);
 
