@@ -16,6 +16,8 @@ import PackageDetailPage from "./pages/PackageDetailPage";
 import TeamPage from "./pages/TeamPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
 
 function App() {
   return (
