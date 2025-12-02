@@ -5,6 +5,34 @@ import { Button } from '../components/ui/button';
 
 const BlogPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch blogs from API
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/blogs`);
+        const data = await response.json();
+        if (data.success) {
+          setBlogPosts(data.blogs);
+        }
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Loading blogs...</div>
+      </div>
+    );
+  }
 
   // Get all unique categories
   const categories = ['All', ...new Set(blogPosts.map(post => post.category))];
