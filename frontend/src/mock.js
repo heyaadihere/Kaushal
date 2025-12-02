@@ -123,7 +123,7 @@ export const testimonialsData = [
     role: "Client",
     content: "Kaushal helped us discuss topics we never even considered. We feel more confident stepping into marriage.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
     id: 2,
@@ -131,7 +131,7 @@ export const testimonialsData = [
     role: "Client",
     content: "The pre-marital mediation sessions brought us closer. We now have a clear plan for finances and family planning.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
     id: 3,
@@ -139,7 +139,7 @@ export const testimonialsData = [
     role: "Client",
     content: "Kaushal taught us how to handle conflicts without letting them fester. It's been a game-changer for our relationship.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
     id: 4,
@@ -147,7 +147,7 @@ export const testimonialsData = [
     role: "Client",
     content: "The Partnership Accord has become our reference guide. It's helped us navigate the first year of marriage with confidence and clarity.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   }
 ];
 
