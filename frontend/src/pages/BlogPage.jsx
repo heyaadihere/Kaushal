@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Tag, TrendingUp } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { blogPosts } from '../blogData';
 
 const BlogPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
