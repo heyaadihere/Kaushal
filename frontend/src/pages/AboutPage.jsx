@@ -59,18 +59,60 @@ const AboutPage = () => {
       {/* Mission & Vision */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-10 rounded-2xl border border-amber-200">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                To transform marriage from a gamble into a conscious choice by equipping couples with the emotional, financial, and practical skills needed for lifelong partnership success.
-              </p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+              <div className="text-gray-700 leading-relaxed space-y-4">
+                <p className="text-lg font-medium">
+                  At Kaushal, our mission is to empower individuals and couples to design their relationships with intention, clarity, and courage. We do this by turning partnership into a practical skill - one that can be learned, practised, and improved over time.
+                </p>
+                <p className="font-semibold text-gray-900 mt-6 mb-3">We are committed to:</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-600 font-bold mt-1">•</span>
+                    <span><strong>Normalising Pre-Marital Conversations</strong> - Offering structured, stigma-free spaces where couples can honestly discuss money, careers, families, boundaries, conflict, intimacy, and future plans.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-600 font-bold mt-1">•</span>
+                    <span><strong>Creating Clear, Human-Centred Frameworks</strong> - Through tools like the Pre-Marital Partnership Accord and Relationship Constitutions.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-600 font-bold mt-1">•</span>
+                    <span><strong>Offering Neutral, Compassionate Facilitation</strong> - Acting as a calm third party, helping both partners feel seen, heard, and respected.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-600 font-bold mt-1">•</span>
+                    <span><strong>Building Emotional and Legal Literacy</strong> - Simplifying complex topics into accessible, culturally sensitive language.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-600 font-bold mt-1">•</span>
+                    <span><strong>Honouring Individuality Within Partnership</strong> - Designing relationship models that reflect your values, whether equal, queer-affirming, inter-faith, or blended families.</span>
+                  </li>
+                </ul>
+                <p className="italic mt-6 text-gray-600">
+                  Through our sessions, content, and tools, we quietly upgrade how people think about love - from "we'll manage somehow" to "we will learn how to do this well, together."
+                </p>
+              </div>
             </div>
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-10 rounded-2xl border border-orange-200">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                A world where every couple enters marriage with clarity, confidence, and a personalized roadmap for navigating life's complexities together.
-              </p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
+              <div className="text-gray-700 leading-relaxed space-y-4">
+                <p className="text-lg">
+                  At Kaushal, we envision a world where partnership is recognised, learned, and practised as a skill - not left to luck, habit, or unspoken expectations. We aim to make structured, pre-marital mediation as normal as planning a wedding, so that every couple walks into commitment with clarity, consent, and shared ownership of their future.
+                </p>
+                <p>
+                  We see Kaushal as India's leading space for informed, emotionally intelligent marriages, where couples are gently guided to talk through money, careers, family dynamics, conflict, intimacy, and long-term life choices before they become fault lines.
+                </p>
+                <p>
+                  Our vision is to replace silent assumptions with clear, humane agreements, captured in living documents like the Partnership Accord and Relationship Constitution that couples actually use in daily life.
+                </p>
+                <p>
+                  Over time, we want to shift the cultural default: from "manage somehow" to "prepare with intention". We aspire to build a generation of couples who know how to listen, negotiate, and realign without hostility.
+                </p>
+                <p className="font-semibold text-gray-900 mt-6">
+                  Ultimately, our vision is simple and radical: that fewer relationships break from preventable misunderstandings, and more marriages thrive because two people chose to practise partnership as a lifelong, evolving skill.
+                </p>
+              </div>
             </div>
           </div>
         </div>
