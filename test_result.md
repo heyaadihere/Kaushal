@@ -119,6 +119,9 @@ frontend:
         - working: true
           agent: "testing"
           comment: "PASSED: Blog listing page fully functional. Hero section loads correctly with 'Relationship Insights & Guidance' title. Featured article section displays properly in 'All' view. Blog post cards show correctly with category tags, titles, excerpts, dates, read times, and 'Read Article' buttons. All 5 blog posts are visible and properly formatted."
+        - working: true
+          agent: "testing"
+          comment: "UPDATED TESTING PASSED: Blog listing now shows 10 articles + 1 featured article (11 total). All 9 category filters present and working: All, Partnership, Finance, Family Dynamics, Communication, Career & Growth, Intimacy & Boundaries (NEW), Life Transitions (NEW), Modern Relationships (NEW). New categories show correct article counts: Intimacy & Boundaries (1), Life Transitions (1), Modern Relationships (1). Updated categories show correct counts: Communication (2), Partnership (2). Hero section and featured article display correctly."
 
   - task: "Blog detail page functionality"
     implemented: true
