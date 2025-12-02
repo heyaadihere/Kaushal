@@ -28,7 +28,7 @@ const SuccessStories = () => {
       names: "Ananya & Vikram",
       location: "Delhi NCR",
       marriageYear: "2024",
-      image: "https://images.unsplash.com/photo-1594217523449-2f3b38e6d18c?w=600&h=600&fit=crop",
+      image: "https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
       story: "We thought we communicated well until life got stressful. The Constructive Dialogue Toolkit taught us not just how to talk, but how to truly understand each other's emotional landscape. These skills saved us during our first major life transition.",
       package: "Constructive Dialogue Toolkit",
       highlight: "Reduced conflicts by 80% in first 6 months"
