@@ -44,7 +44,7 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''} animate-reveal-bottom stagger-${index + 1}`}
               >
                 {/* Content */}
                 <div className={`space-y-6 ${!isEven ? 'lg:order-2' : ''}`}>
