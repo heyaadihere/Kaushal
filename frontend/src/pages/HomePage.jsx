@@ -14,4 +14,25 @@ import ComparisonTool from '../components/ComparisonTool';
 import SuccessStories from '../components/SuccessStories';
 import Testimonials from '../components/Testimonials';
 
-const HomePage = () => {\n  return (\n    <div>\n      <Hero />\n      <About />\n      <AnimatedStats />\n      <WhyChoose />\n      <BenefitsSection />\n      <Services />\n      <InteractiveTimeline />\n      <Process />\n      <ReadinessCalculator />\n      <VideoGallery />\n      <Packages />\n      <ComparisonTool />\n      <SuccessStories />\n      <Testimonials />\n    </div>\n  );\n};\n\nexport default HomePage;
+const HomePage = () => {
+  return (
+    <div>
+      <Hero />
+      <About />
+      <AnimatedStats />
+      <WhyChoose />
+      <BenefitsSection />
+      <Services />
+      <InteractiveTimeline />
+      <Process />
+      <ReadinessCalculator />
+      <VideoGallery />
+      <Packages />
+      <ComparisonTool />
+      <SuccessStories />
+      <Testimonials />
+    </div>
+  );
+};
+
+export default HomePage;
