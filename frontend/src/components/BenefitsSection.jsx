@@ -83,7 +83,7 @@ const BenefitsSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group"
+                className="card-3d bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group animate-scale-in stagger-${(index % 4) + 1} hover:shadow-2xl"
               >
                 <div className="inline-flex p-4 rounded-xl bg-white/20 mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="w-8 h-8 text-white" />
