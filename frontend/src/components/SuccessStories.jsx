@@ -38,7 +38,7 @@ const SuccessStories = () => {
       names: "Kavya & Arjun",
       location: "Pune, Maharashtra",
       marriageYear: "2023",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop",
+      image: "https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
       story: "The Sankalp program was transformative. We went from having surface-level conversations to creating a comprehensive life blueprint. Eight sessions felt intensive, but the depth of alignment we achieved was worth every moment. We're not just married - we're true partners.",
       package: "Sankalp (8 Sessions)",
       highlight: "Built a complete 10-year partnership roadmap"
