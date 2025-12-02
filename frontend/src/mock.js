@@ -210,27 +210,27 @@ export const teamData = [
     name: "Dr. Anjali Sharma",
     role: "Lead Facilitator & Behavioral Expert",
     description: "15+ years in relationship counseling and conflict resolution",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
     id: 2,
     name: "Rajiv Mehta",
     role: "Financial Planning Specialist",
     description: "Certified Financial Planner with expertise in couple's finances",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
     id: 3,
     name: "Priya Desai",
     role: "Family Dynamics Mediator",
     description: "Expert in intercultural relationships and family integration",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
     id: 4,
     name: "Vikram Patel",
     role: "Communication Coach",
     description: "Specialized in emotional intelligence and effective dialogue",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   }
 ];
