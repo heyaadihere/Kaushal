@@ -73,8 +73,14 @@ async def get_status_checks():
     
     return status_checks
 
-# Include blog routes
+# Include all routes
 api_router.include_router(blogs_router, tags=["blogs"])
+api_router.include_router(services_router, tags=["services"])
+api_router.include_router(packages_router, tags=["packages"])
+api_router.include_router(team_router, tags=["team"])
+api_router.include_router(testimonials_router, tags=["testimonials"])
+api_router.include_router(faq_router, tags=["faq"])
+api_router.include_router(contact_router, tags=["contact"])
 
 # Include the router in the main app
 app.include_router(api_router)
