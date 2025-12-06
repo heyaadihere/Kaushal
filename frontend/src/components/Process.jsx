@@ -121,18 +121,14 @@ const Process = () => {
             ))}
           </div>
 
-          {/* Video */}
+          {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.pexels.com/photos/6893882/pexels-photo-6893882.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                alt="Couple planning together"
                 className="w-full h-full object-cover"
-              >
-                <source src="https://videos.pexels.com/video-files/6893882/6893882-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </div>
 
