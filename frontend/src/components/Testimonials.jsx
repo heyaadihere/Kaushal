@@ -61,12 +61,12 @@ const Testimonials = () => {
               <Quote className="w-10 h-10 text-amber-600 mb-4" />
               
               <p className="text-gray-700 leading-relaxed mb-6 italic">
-                "{testimonial.feedback}"
+                "{testimonial.content || testimonial.feedback}"
               </p>
 
               <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
                 <img
-                  src={testimonial.photo}
+                  src={testimonial.image || testimonial.photo}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover"
                 />
