@@ -105,22 +105,26 @@ const SuccessStories = () => {
           ))}
         </div>
 
-        {/* Video testimonial */}
+        {/* Image testimonial */}
         <div className="mt-20 max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-2">Hear From Our Couples</h3>
-            <p className="text-gray-600 text-lg">Watch video testimonials from couples who transformed their partnerships</p>
+            <p className="text-gray-600 text-lg">Real testimonials from couples who transformed their partnerships</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src="https://videos.pexels.com/video-files/3191158/3191158-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              <img 
+                src="https://images.pexels.com/photos/3692879/pexels-photo-3692879.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                alt="Happy couple testimonial"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src="https://videos.pexels.com/video-files/5533921/5533921-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              <img 
+                src="https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                alt="Couple success story"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
