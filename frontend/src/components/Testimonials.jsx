@@ -100,44 +100,32 @@ const Testimonials = () => {
             <p className="text-gray-600">Watch couples share their journey with Kaushal</p>
           </div>
 
-          {/* Main Video */}
+          {/* Main Image */}
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl group">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.pexels.com/photos/3191158/pexels-photo-3191158.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
+                alt="Happy couple testimonial"
                 className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
-              >
-                <source src="https://videos.pexels.com/video-files/3191158/3191158-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              />
             </div>
           </div>
 
-          {/* Video Grid */}
+          {/* Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-xl group">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.pexels.com/photos/7235200/pexels-photo-7235200.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                alt="Couple success story"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-              >
-                <source src="https://videos.pexels.com/video-files/7235200/7235200-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl group">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.pexels.com/photos/5531503/pexels-photo-5531503.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                alt="Happy partnership"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-              >
-                <source src="https://videos.pexels.com/video-files/5531503/5531503-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              />
             </div>
           </div>
         </div>
