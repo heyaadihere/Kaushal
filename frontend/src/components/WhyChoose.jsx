@@ -106,7 +106,7 @@ const WhyChoose = () => {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                src="https://images.pexels.com/photos/6224368/pexels-photo-6224368.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=600&fit=crop&q=80"
                 alt="Couple discussing partnership"
                 className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
               />
@@ -116,10 +116,10 @@ const WhyChoose = () => {
           {/* Image Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {[
-              'https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-              'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-              'https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-              'https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop'
+              'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&q=80',
+              'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop&q=80',
+              'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop&q=80',
+              'https://images.unsplash.com/photo-1522673607200-8f2a2902e8f5?w=400&h=400&fit=crop&q=80'
             ].map((img, index) => (
               <div
                 key={index}

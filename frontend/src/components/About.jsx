@@ -72,12 +72,12 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right: Image/Video Gallery */}
+          {/* Right: Image Gallery */}
           <div className="relative">
             {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                src="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&h=800&fit=crop&q=80"
                 alt="Pre-marital counseling session"
                 className="w-full h-96 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
               />
@@ -88,14 +88,14 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 mt-6">
               <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <img
-                  src="https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                  src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=300&fit=crop&q=80"
                   alt="Couple consultation"
                   className="w-full h-40 object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <img
-                  src="https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                  src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=400&h=300&fit=crop&q=80"
                   alt="Partnership meeting"
                   className="w-full h-40 object-cover hover:scale-110 transition-transform duration-500"
                 />
