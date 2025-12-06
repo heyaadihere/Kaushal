@@ -10,6 +10,12 @@ from typing import List
 import uuid
 from datetime import datetime, timezone
 from routes.blogs import router as blogs_router
+from routes.services import router as services_router
+from routes.packages import router as packages_router
+from routes.team import router as team_router
+from routes.testimonials import router as testimonials_router
+from routes.faq import router as faq_router
+from routes.contact import router as contact_router
 
 
 ROOT_DIR = Path(__file__).parent
