@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, Quote } from 'lucide-react';
-import { testimonialsData } from '../mock';
 
 const Testimonials = () => {
+  const [testimonialsData, setTestimonialsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/testimonials`);
+        const data = await response.json();
+        if (data.success) {
+          setTestimonialsData(data.testimonials);
+        }
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchTestimonials();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="text-lg text-gray-600">Loading testimonials...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="testimonials" className="py-24 bg-white relative overflow-hidden">
       {/* Decorative Background */}
@@ -51,6 +80,9 @@ const Testimonials = () => {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-14 h-14 rounded-full object-cover border-2 border-amber-200"
+                  onError={(e) => {
+                    e.target.src = 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop';
+                  }}
                 />
                 <div>
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>

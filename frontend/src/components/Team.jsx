@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Linkedin } from 'lucide-react';
-import { teamData } from '../mock';
 
 const Team = () => {
+  const [teamData, setTeamData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTeam = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/team`);
+        const data = await response.json();
+        if (data.success) {
+          setTeamData(data.team);
+        }
+      } catch (error) {
+        console.error('Error fetching team:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchTeam();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="text-lg text-gray-600">Loading team...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Decorative Background */}
@@ -36,6 +65,9 @@ const Team = () => {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    e.target.src = 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
