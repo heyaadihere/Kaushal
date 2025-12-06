@@ -95,18 +95,14 @@ const Services = () => {
                   </Button>
                 </div>
 
-                {/* Video with Enhanced Effects */}
+                {/* Image with Enhanced Effects */}
                 <div className={`relative ${!isEven ? 'lg:order-1' : ''}`}>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
+                    <img
+                      src={service.videoUrl ? service.videoUrl.replace('/video-files/', '/photos/').replace('-uhd_2560_1440_25fps.mp4', '.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop').replace('videos.pexels.com', 'images.pexels.com') : 'https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'}
+                      alt={service.title}
                       className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
-                    >
-                      <source src={service.videoUrl} type="video/mp4" />
-                    </video>
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent group-hover:from-gray-900/40 transition-colors"></div>
                     
                     {/* Overlay Text on Hover */}
