@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Building2, MessagesSquare, Users, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { servicesData } from '../mock';
 
 const Services = () => {
   const getIcon = (iconName) => {
