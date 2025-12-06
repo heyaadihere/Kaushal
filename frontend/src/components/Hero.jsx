@@ -17,17 +17,13 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src="https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Happy couple"
           className="w-full h-full object-cover scale-105"
-        >
-          <source src="https://videos.pexels.com/video-files/8035058/8035058-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-        </video>
+        />
         {/* Enhanced Overlay with Animation */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-amber-900/60 to-gray-800/75"></div>
         
