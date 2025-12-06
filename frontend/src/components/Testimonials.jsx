@@ -10,7 +10,9 @@ const Testimonials = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/testimonials`);
-        setTestimonials(response.data);
+        if (response.data.success) {
+          setTestimonials(response.data.testimonials);
+        }
       } catch (error) {
         console.error('Error fetching testimonials:', error);
       } finally {
