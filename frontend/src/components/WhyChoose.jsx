@@ -1,8 +1,26 @@
 import React from 'react';
 import { MessageCircle, FileText, Shield, Target } from 'lucide-react';
-import { whyChooseData } from '../mock';
 
 const WhyChoose = () => {
+  const whyChooseData = {
+    title: "Fostering Informed Marriages Built on Clarity and Communication",
+    subtitle: "A beautiful wedding may last a day, but a well-structured marriage lasts a lifetime. Through our specialized pre-marital mediation programs, we help couples build a foundation of trust, transparency, and mutual understanding — bridging the emotional, practical, and legal dimensions of marriage.",
+    features: [
+      {
+        id: 1,
+        title: "Guided Communication",
+        description: "Master the art of meaningful dialogue with structured frameworks that help you navigate complex topics with empathy and clarity.",
+        icon: "MessageCircle"
+      },
+      {
+        id: 2,
+        title: "Structured Agreements",
+        description: "Create a personalized Partnership Accord that documents your shared values, expectations, and commitments for a harmonious future.",
+        icon: "FileText"
+      }
+    ]
+  };
+
   const additionalFeatures = [
     {
       icon: Shield,
