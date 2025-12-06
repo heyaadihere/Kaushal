@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the complete blog functionality for the Kaushal website including blog listing page, blog detail pages, category filtering, navigation, and all related features."
+user_problem_statement: "COMPREHENSIVE WEBSITE TESTING - Test the ENTIRE Kaushal Pre-Marital Counseling website to verify it's production-ready. Test all pages, all functionalities, all APIs, all forms, and all integrations. Base URL: http://localhost:3000"
 
 frontend:
   - task: "Blog listing page functionality"
