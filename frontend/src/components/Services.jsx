@@ -38,9 +38,9 @@ const Services = () => {
 
   if (loading) {
     return (
-      <section className=\"py-24 bg-gradient-to-br from-gray-50 to-amber-50\">
-        <div className=\"container mx-auto px-4 text-center\">
-          <div className=\"text-lg text-gray-600\">Loading services...</div>
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-amber-50">
+        <div className="container mx-auto px-4 text-center">
+          <div className="text-lg text-gray-600">Loading services...</div>
         </div>
       </section>
     );
