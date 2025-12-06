@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
-import { heroData } from '../mock';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const heroData = {
+    title: "The Partnership Accord by Kaushal",
+    subtitle: "Kaushal - It's a Skill!",
+    description: "A modern premarital framework that emphasizes equality, communication, and shared responsibility – essentially your own 'Marital Charter'"
+  };
 
   useEffect(() => {
     setIsVisible(true);
