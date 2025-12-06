@@ -74,17 +74,13 @@ const About = () => {
 
           {/* Right: Image/Video Gallery */}
           <div className="relative">
-            {/* Main Video */}
+            {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                alt="Pre-marital counseling session"
                 className="w-full h-96 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
-              >
-                <source src="https://videos.pexels.com/video-files/6224368/6224368-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </div>
 
