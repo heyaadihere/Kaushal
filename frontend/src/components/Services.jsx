@@ -6,11 +6,11 @@ const Services = () => {
   const [servicesData, setServicesData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Image mapping for services - relevant couples and marriage counseling images
+  // Image mapping for services - diverse couples counseling images
   const serviceImages = {
-    "1": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&h=800&fit=crop&q=80",
-    "2": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=800&fit=crop&q=80",
-    "3": "https://images.unsplash.com/photo-1522673607200-8f2a2902e8f5?w=1200&h=800&fit=crop&q=80"
+    "1": "https://images.unsplash.com/photo-1553915632-175f60dd8e36?w=1200&h=800&fit=crop&q=80",
+    "2": "https://images.unsplash.com/photo-1604881991664-593b31b88488?w=1200&h=800&fit=crop&q=80",
+    "3": "https://images.pexels.com/photos/758898/pexels-photo-758898.png?w=1200&h=800&fit=crop&q=80"
   };
 
   useEffect(() => {
@@ -119,7 +119,7 @@ const Services = () => {
                 <div className={`relative ${!isEven ? 'lg:order-1' : ''}`}>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                     <img
-                      src={serviceImages[service.id] || 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&h=800&fit=crop&q=80'}
+                      src={serviceImages[service.id] || 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1200&h=800&fit=crop&q=80'}
                       alt={service.title}
                       className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                     />

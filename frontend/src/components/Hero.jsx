@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=1920&h=1080&fit=crop&q=80"
           alt="Happy couple"
           className="w-full h-full object-cover scale-105"
         />
