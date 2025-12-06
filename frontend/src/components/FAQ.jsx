@@ -50,21 +50,22 @@ const FAQ = () => {
             <div className="text-center text-gray-600">Loading FAQs...</div>
           ) : (
             <Accordion type="single" collapsible className="space-y-4">
-              {faqData.map((faq) => (
-              <AccordionItem
-                key={faq.id}
-                value={`item-${faq.id}`}
-                className="bg-white rounded-xl border border-amber-200 px-6 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-amber-600 transition-colors">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600 leading-relaxed pt-2 pb-4">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                {faqData.map((faq) => (
+                <AccordionItem
+                  key={faq.id}
+                  value={`item-${faq.id}`}
+                  className="bg-white rounded-xl border border-amber-200 px-6 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-amber-600 transition-colors">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 leading-relaxed pt-2 pb-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          )}
         </div>
 
         {/* Still Have Questions CTA */}
