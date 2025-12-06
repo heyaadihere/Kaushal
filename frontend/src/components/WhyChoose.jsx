@@ -100,20 +100,16 @@ const WhyChoose = () => {
           })}
         </div>
 
-        {/* Video Testimonial with Image Grid */}
+        {/* Testimonial with Image Grid */}
         <div className="mt-20 space-y-8">
-          {/* Main Video */}
+          {/* Main Image */}
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl group">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.pexels.com/photos/6224368/pexels-photo-6224368.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
+                alt="Couple discussing partnership"
                 className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
-              >
-                <source src="https://videos.pexels.com/video-files/7235164/7235164-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-              </video>
+              />
             </div>
           </div>
 
