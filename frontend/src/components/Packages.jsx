@@ -4,6 +4,36 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
 const Packages = () => {
+  const [packagesData, setPackagesData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPackages = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/packages`);
+        const data = await response.json();
+        if (data.success) {
+          setPackagesData(data.packages);
+        }
+      } catch (error) {
+        console.error('Error fetching packages:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPackages();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className=\"py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900\">
+        <div className=\"container mx-auto px-4 text-center\">
+          <div className=\"text-lg text-gray-300\">Loading packages...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="packages" className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900 relative overflow-hidden">
       {/* Animated Background Elements */}
