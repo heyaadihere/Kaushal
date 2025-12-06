@@ -3,6 +3,26 @@ import { Building2, MessagesSquare, Users, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Services = () => {
+  const [servicesData, setServicesData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services`);
+        const data = await response.json();
+        if (data.success) {
+          setServicesData(data.services);
+        }
+      } catch (error) {
+        console.error('Error fetching services:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchServices();
+  }, []);
+
   const getIcon = (iconName) => {
     switch (iconName) {
       case 'Building2':
@@ -15,6 +35,16 @@ const Services = () => {
         return Building2;
     }
   };
+
+  if (loading) {
+    return (
+      <section className=\"py-24 bg-gradient-to-br from-gray-50 to-amber-50\">
+        <div className=\"container mx-auto px-4 text-center\">
+          <div className=\"text-lg text-gray-600\">Loading services...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-amber-50 relative overflow-hidden">
