@@ -8,7 +8,7 @@ const SuccessStories = () => {
       names: "Priya & Aditya",
       location: "Mumbai, Maharashtra",
       marriageYear: "2023",
-      image: "https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=600&fit=crop&q=80",
       story: "We came to Kaushal with completely different expectations about finances and career. Through the Sammati program, we discovered how to honor both our ambitions while building something together. The Partnership Accord has been our north star through every major decision.",
       package: "Sammati (5 Sessions)",
       highlight: "Created a 5-year financial roadmap together"
@@ -18,7 +18,7 @@ const SuccessStories = () => {
       names: "Rohan & Meera",
       location: "Bangalore, Karnataka",
       marriageYear: "2022",
-      image: "https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&h=600&fit=crop&q=80",
       story: "Coming from very different family backgrounds, we struggled with how to set boundaries with extended family. The Family Integration Strategy helped us create clear, respectful boundaries while honoring our cultural roots. Two years later, we've never been happier.",
       package: "Family Integration Strategy",
       highlight: "Harmoniously merged two different family traditions"
@@ -28,7 +28,7 @@ const SuccessStories = () => {
       names: "Ananya & Vikram",
       location: "Delhi NCR",
       marriageYear: "2024",
-      image: "https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&h=600&fit=crop&q=80",
       story: "We thought we communicated well until life got stressful. The Constructive Dialogue Toolkit taught us not just how to talk, but how to truly understand each other's emotional landscape. These skills saved us during our first major life transition.",
       package: "Constructive Dialogue Toolkit",
       highlight: "Reduced conflicts by 80% in first 6 months"
@@ -38,7 +38,7 @@ const SuccessStories = () => {
       names: "Kavya & Arjun",
       location: "Pune, Maharashtra",
       marriageYear: "2023",
-      image: "https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=600&fit=crop&q=80",
       story: "The Sankalp program was transformative. We went from having surface-level conversations to creating a comprehensive life blueprint. Eight sessions felt intensive, but the depth of alignment we achieved was worth every moment. We're not just married - we're true partners.",
       package: "Sankalp (8 Sessions)",
       highlight: "Built a complete 10-year partnership roadmap"
@@ -114,14 +114,14 @@ const SuccessStories = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/3692879/pexels-photo-3692879.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop&q=80"
                 alt="Happy couple testimonial"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                src="https://images.unsplash.com/photo-1532456745301-b2c645d8b80d?w=800&h=600&fit=crop&q=80"
                 alt="Couple success story"
                 className="w-full h-full object-cover"
               />

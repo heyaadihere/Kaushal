@@ -51,67 +51,58 @@ const Process = () => {
     },
     {
       title: 'Partnership Accord Creation',
-      description: 'Co-create your personalized agreement documenting commitments and expectations',
-      duration: 'Throughout'
+      description: 'Document your shared values, agreements, and commitments in a formal accord',
+      duration: 'Final Week'
     },
     {
-      title: 'Implementation & Follow-up',
-      description: 'Take-home frameworks, resources, and optional follow-up sessions for continued growth',
-      duration: 'Ongoing'
+      title: 'Ongoing Support',
+      description: 'Access to resources, follow-up sessions, and continued guidance as you build your life together',
+      duration: 'Lifetime'
     }
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-orange-100/40 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, #d97706 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h3 className="text-amber-600 font-semibold text-lg uppercase tracking-wide mb-4">Our Process</h3>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Your Journey to Partnership Clarity
+            Your Journey to a Strong Partnership
           </h2>
           <p className="text-lg text-gray-600">
-            A structured, proven approach to building lasting marital harmony
+            A clear, step-by-step path from first conversation to lasting commitment
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* Timeline */}
-          <div className="relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          {/* Steps */}
+          <div className="space-y-6">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`relative pl-12 pb-12 transition-all duration-500 ${
-                  index <= activeStep ? 'opacity-100 translate-x-0' : 'opacity-30 translate-x-4'
+                className={`flex items-start gap-4 p-6 rounded-xl transition-all duration-500 ${
+                  index <= activeStep
+                    ? 'bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 shadow-lg scale-105'
+                    : 'bg-white border-2 border-gray-200'
                 }`}
               >
-                {/* Connector Line */}
-                {index < steps.length - 1 && (
-                  <div
-                    className={`absolute left-5 top-12 w-0.5 h-full transition-all duration-1000 ${
-                      index < activeStep ? 'bg-amber-600' : 'bg-gray-300'
-                    }`}
-                  ></div>
-                )}
-
-                {/* Step Circle */}
-                <div className="absolute left-0 top-0">
+                <div className="flex-shrink-0">
                   {index <= activeStep ? (
-                    <CheckCircle2 className="w-12 h-12 text-amber-600 animate-bounce" />
+                    <CheckCircle2 className="w-8 h-8 text-amber-600 animate-scale-in" />
                   ) : (
-                    <Circle className="w-12 h-12 text-gray-300" />
+                    <Circle className="w-8 h-8 text-gray-400" />
                   )}
                 </div>
-
-                {/* Content */}
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-amber-100 hover:shadow-2xl transition-shadow duration-300">
+                <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
-                    <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-medium">
+                    <h4 className="text-xl font-bold text-gray-900">{step.title}</h4>
+                    <span className="text-sm font-semibold text-amber-600 bg-amber-100 px-3 py-1 rounded-full">
                       {step.duration}
                     </span>
                   </div>
@@ -125,7 +116,7 @@ const Process = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/6893882/pexels-photo-6893882.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&h=800&fit=crop&q=80"
                 alt="Couple planning together"
                 className="w-full h-full object-cover"
               />
@@ -135,8 +126,8 @@ const Process = () => {
             {/* Floating Stats */}
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-2xl">
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-600 mb-1">100%</div>
-                <p className="text-sm text-gray-600">Satisfaction Rate</p>
+                <div className="text-4xl font-bold text-amber-600 mb-1">95%</div>
+                <p className="text-sm text-gray-600">Completion Rate</p>
               </div>
             </div>
           </div>

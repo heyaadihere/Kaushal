@@ -6,11 +6,11 @@ const Services = () => {
   const [servicesData, setServicesData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Image mapping for services
+  // Image mapping for services - relevant couples and marriage counseling images
   const serviceImages = {
-    "1": "https://images.pexels.com/photos/7233822/pexels-photo-7233822.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-    "2": "https://images.pexels.com/photos/5533921/pexels-photo-5533921.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
-    "3": "https://images.pexels.com/photos/6893882/pexels-photo-6893882.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+    "1": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&h=800&fit=crop&q=80",
+    "2": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=800&fit=crop&q=80",
+    "3": "https://images.unsplash.com/photo-1522673607200-8f2a2902e8f5?w=1200&h=800&fit=crop&q=80"
   };
 
   useEffect(() => {
@@ -67,12 +67,12 @@ const Services = () => {
             Strengthening Marriages with Structured Conversations
           </h2>
           <p className="text-lg text-gray-600">
-            Our comprehensive programs guide you through every essential aspect of building a lasting partnership.
+            Transform your relationship with expert guidance and proven frameworks
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="space-y-16">
+        <div className="space-y-24">
           {servicesData.map((service, index) => {
             const Icon = getIcon(service.icon);
             const isEven = index % 2 === 0;
@@ -80,16 +80,29 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''} animate-reveal-bottom stagger-${index + 1}`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
               >
                 {/* Content */}
                 <div className={`space-y-6 ${!isEven ? 'lg:order-2' : ''}`}>
-                  <div className="inline-flex p-4 rounded-xl bg-amber-100">
+                  <div className="inline-flex p-4 rounded-xl bg-amber-100 shadow-lg">
                     <Icon className="w-8 h-8 text-amber-700" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900">{service.title}</h3>
-                  <p className="text-xl text-amber-600 font-semibold">{service.subtitle}</p>
-                  <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
+
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-amber-600 font-semibold text-lg mb-4">
+                      {service.subtitle}
+                    </p>
+                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      {service.fullDescription}
+                    </p>
+                  </div>
+
                   <Button
                     onClick={() => {
                       const element = document.querySelector('#packages');
@@ -106,7 +119,7 @@ const Services = () => {
                 <div className={`relative ${!isEven ? 'lg:order-1' : ''}`}>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                     <img
-                      src={serviceImages[service.id] || 'https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'}
+                      src={serviceImages[service.id] || 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&h=800&fit=crop&q=80'}
                       alt={service.title}
                       className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -121,12 +134,9 @@ const Services = () => {
                   </div>
 
                   {/* Animated Floating Badge */}
-                  <div className="absolute -top-4 -right-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-3 rounded-full shadow-2xl font-semibold animate-bounce-in hover:scale-110 transition-transform">
-                    Service {service.id}
+                  <div className="absolute -top-4 -right-4 bg-amber-600 text-white px-6 py-3 rounded-full shadow-lg transform rotate-12 hover:rotate-0 transition-transform">
+                    <p className="font-semibold text-sm">Popular</p>
                   </div>
-
-                  {/* Decorative Circle */}
-                  <div className={`absolute ${isEven ? '-left-8 top-1/2' : '-right-8 top-1/2'} w-24 h-24 bg-amber-200/30 rounded-full blur-2xl`}></div>
                 </div>
               </div>
             );

@@ -1,30 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Star, Quote } from 'lucide-react';
+import axios from 'axios';
+import { Quote, Star } from 'lucide-react';
 
 const Testimonials = () => {
-  const [testimonialsData, setTestimonialsData] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/testimonials`);
-        const data = await response.json();
-        if (data.success) {
-          setTestimonialsData(data.testimonials);
-        }
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/testimonials`);
+        setTestimonials(response.data);
       } catch (error) {
         console.error('Error fetching testimonials:', error);
       } finally {
         setLoading(false);
       }
     };
+
     fetchTestimonials();
   }, []);
 
   if (loading) {
     return (
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-white to-amber-50">
         <div className="container mx-auto px-4 text-center">
           <div className="text-lg text-gray-600">Loading testimonials...</div>
         </div>
@@ -33,78 +32,67 @@ const Testimonials = () => {
   }
 
   return (
-    <section id="testimonials" className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-white to-amber-50 relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100/50 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h3 className="text-amber-600 font-semibold text-lg uppercase tracking-wide mb-4">Testimonials</h3>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Real Stories, Real Transformations
+            What Couples Say About Kaushal
           </h2>
           <p className="text-lg text-gray-600">
-            Hear from couples who have strengthened their partnerships through Kaushal
+            Real stories from couples who transformed their partnerships through our programs
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {testimonialsData.map((testimonial) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
+          {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-amber-100"
             >
-              {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-20 h-20 text-amber-600" />
-              </div>
-
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, index) => (
-                  <Star key={index} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-
-              {/* Content */}
-              <p className="text-gray-700 text-lg leading-relaxed mb-6 relative z-10">
-                "{testimonial.content}"
+              <Quote className="w-10 h-10 text-amber-600 mb-4" />
+              
+              <p className="text-gray-700 leading-relaxed mb-6 italic">
+                "{testimonial.feedback}"
               </p>
 
-              {/* Author */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
                 <img
-                  src={testimonial.image}
+                  src={testimonial.photo}
                   alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-amber-200"
-                  onError={(e) => {
-                    e.target.src = 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop';
-                  }}
+                  className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <div className="flex gap-1 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Video Section with Multiple Videos */}
-        <div className="mt-20 space-y-12">
+        {/* Testimonial Images */}
+        <div className="mt-20 space-y-8">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">See How Couples Transform</h3>
-            <p className="text-gray-600">Watch couples share their journey with Kaushal</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-2">Hear From Our Couples</h3>
+            <p className="text-gray-600 text-lg">Real testimonials from couples who transformed their partnerships</p>
           </div>
 
           {/* Main Image */}
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                src="https://images.pexels.com/photos/3191158/pexels-photo-3191158.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=600&fit=crop&q=80"
                 alt="Happy couple testimonial"
                 className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
               />
@@ -115,14 +103,14 @@ const Testimonials = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.pexels.com/photos/7235200/pexels-photo-7235200.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1532456745301-b2c645d8b80d?w=800&h=600&fit=crop&q=80"
                 alt="Couple success story"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl group">
               <img
-                src="https://images.pexels.com/photos/5531503/pexels-photo-5531503.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=800&h=600&fit=crop&q=80"
                 alt="Happy partnership"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               />
