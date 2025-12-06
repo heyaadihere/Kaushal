@@ -26,9 +26,9 @@ const Packages = () => {
 
   if (loading) {
     return (
-      <section className=\"py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900\">
-        <div className=\"container mx-auto px-4 text-center\">
-          <div className=\"text-lg text-gray-300\">Loading packages...</div>
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900">
+        <div className="container mx-auto px-4 text-center">
+          <div className="text-lg text-gray-300">Loading packages...</div>
         </div>
       </section>
     );
