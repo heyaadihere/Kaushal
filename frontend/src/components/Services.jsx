@@ -6,6 +6,13 @@ const Services = () => {
   const [servicesData, setServicesData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Image mapping for services
+  const serviceImages = {
+    "1": "https://images.pexels.com/photos/7233822/pexels-photo-7233822.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+    "2": "https://images.pexels.com/photos/5533921/pexels-photo-5533921.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+    "3": "https://images.pexels.com/photos/6893882/pexels-photo-6893882.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+  };
+
   useEffect(() => {
     const fetchServices = async () => {
       try {
