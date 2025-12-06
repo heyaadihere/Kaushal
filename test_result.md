@@ -292,15 +292,24 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Blog listing page functionality"
-    - "Blog detail page functionality"
-    - "Blog category filtering"
-    - "Blog navigation and routing"
+    - "Home Page functionality"
+    - "About Page functionality"
+    - "Services Page functionality"
+    - "Service Detail Pages functionality"
+    - "Packages Page functionality"
+    - "Package Detail Pages functionality"
+    - "Team Page functionality"
+    - "FAQ Page functionality"
+    - "Contact Page functionality"
+    - "Navigation and Header functionality"
+    - "API Integration functionality"
+    - "Interactive Features functionality"
+    - "Visual and Performance functionality"
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
-  new_articles_tested: true
-  total_articles_verified: 10
+  comprehensive_testing: true
+  production_readiness_check: true
 
 agent_communication:
     - agent: "testing"
