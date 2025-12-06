@@ -1,8 +1,12 @@
 import React from 'react';
 import { Heart, Users, MessageCircle, FileCheck } from 'lucide-react';
-import { aboutData } from '../mock';
 
 const About = () => {
+  const aboutData = {
+    title: "Talk through what matters, before it matters.",
+    description: "Marriage is a commitment that extends far beyond rituals and celebrations. At Kaushal It's a Skill, we guide couples through essential pre-marital dialogues on finances, career aspirations, family dynamics, and more. With experienced behavioural and interpersonal mediators, we help transform unspoken expectations into clear, informed understandings."
+  };
+
   const features = [
     {
       icon: Heart,
