@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Check, Star, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { packagesData } from '../mock';
 
 const Packages = () => {
   return (
