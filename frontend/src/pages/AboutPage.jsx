@@ -45,7 +45,7 @@ const AboutPage = () => {
               About Kaushal
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              We're not therapists. We're not marriage counselors. We're partnership architects who help couples build lasting foundations before they say "I do."
+              We are partnership architects who help couples build lasting foundations before they say "I do." Through structured conversations, emotional intelligence, and proven frameworks, we guide partners in designing relationships with intention, clarity, and courage.
             </p>
             <div className="prose prose-lg max-w-3xl mx-auto text-gray-600">
               <p>
@@ -169,31 +169,33 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Image Gallery Section */}
       <section className="py-24 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">See Our Approach in Action</h2>
-              <p className="text-gray-600 text-lg">Watch how we guide couples through meaningful conversations</p>
+              <p className="text-gray-600 text-lg">Guiding couples through meaningful conversations</p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl mb-12">
-              <video autoPlay loop muted playsInline className="w-full">
-                <source src="https://videos.pexels.com/video-files/7235164/7235164-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-              </video>
+              <img
+                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=1200&h=600&fit=crop&q=80"
+                alt="Couple counseling"
+                className="w-full"
+              />
             </div>
 
             {/* Image Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                'https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/3585325/pexels-photo-3585325.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-                'https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop'
+                'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1560745155-a978f7ef4d06?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1627964464837-6328f5931576?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1501901609772-df0848060b33?w=400&h=400&fit=crop&q=80',
+                'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop&q=80'
               ].map((img, index) => (
                 <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
                   <img

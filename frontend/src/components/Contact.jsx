@@ -66,8 +66,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91 98765 43210',
-      href: 'tel:+919876543210'
+      content: '+91-9873333620',
+      href: 'tel:+919873333620'
     },
     {
       icon: Mail,
@@ -78,7 +78,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      content: 'Mumbai, Maharashtra, India',
+      content: 'Vasant Kunj, New Delhi, India',
       href: '#'
     },
     {
@@ -183,7 +183,7 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Info & Video */}
+          {/* Contact Info & Image */}
           <div className="space-y-8">
             {/* Contact Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -203,17 +203,13 @@ const Contact = () => {
               })}
             </div>
 
-            {/* Video */}
+            {/* Image */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1200&h=800&fit=crop&q=80"
+                alt="Happy couple"
                 className="w-full h-full object-cover"
-              >
-                <source src="https://videos.pexels.com/video-files/8035058/8035058-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-              </video>
+              />
             </div>
 
             {/* Additional CTA */}
