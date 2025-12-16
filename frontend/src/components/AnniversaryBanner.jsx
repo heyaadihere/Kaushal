@@ -28,7 +28,7 @@ const AnniversaryBanner = () => {
                 10 Years of Building Lasting Partnerships
               </h3>
               <p className="text-white/90 text-sm md:text-base">
-                A decade of guiding 500+ couples to harmonious marriages | 2014 - 2024
+                A decade of guiding 500+ couples to harmonious marriages | 2015 - 2025
               </p>
             </div>
           </div>
