@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import AnniversaryBanner from '../components/AnniversaryBanner';
 import About from '../components/About';
 import AnimatedStats from '../components/AnimatedStats';
 import WhyChoose from '../components/WhyChoose';
@@ -18,6 +19,7 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
+      <AnniversaryBanner />
       <About />
       <AnimatedStats />
       <WhyChoose />
