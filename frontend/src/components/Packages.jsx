@@ -79,7 +79,6 @@ const Packages = () => {
               <div className="text-center mb-6">
                 <h3 className="text-3xl font-bold text-white mb-2">{pkg.name}</h3>
                 <p className="text-amber-400 font-medium mb-4">{pkg.subtitle}</p>
-                <div className="text-5xl font-bold text-white mb-2">{pkg.price}</div>
                 <p className="text-gray-400 text-sm">{pkg.sessions} Sessions</p>
               </div>
 
