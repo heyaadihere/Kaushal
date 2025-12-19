@@ -98,40 +98,23 @@ const ComparisonTool = () => {
                   key={featureIndex}
                   className="border-b border-gray-100 hover:bg-gray-50 transition-colors"
                 >
-                  <td className="p-6 font-medium text-gray-700">{feature.name}</td>
+                  <td className="p-3 text-sm text-gray-700">{feature.name}</td>
                   {packages.map((pkg, pkgIndex) => (
                     <td
                       key={pkgIndex}
-                      className={`p-6 text-center transition-all duration-300 ${
+                      className={`p-3 text-center transition-all duration-300 ${
                         hoveredPackage === pkgIndex ? 'bg-amber-50' : ''
                       } ${pkg.popular ? 'bg-amber-50/50' : ''}`}
                     >
                       {pkg.features[featureIndex].included ? (
-                        <Check className="w-6 h-6 text-green-600 mx-auto" />
+                        <Check className="w-5 h-5 text-green-600 mx-auto" />
                       ) : (
-                        <X className="w-6 h-6 text-gray-300 mx-auto" />
+                        <X className="w-5 h-5 text-gray-300 mx-auto" />
                       )}
                     </td>
                   ))}
                 </tr>
               ))}
-              <tr>
-                <td className="p-6"></td>
-                {packages.map((pkg, index) => (
-                  <td key={index} className="p-6 text-center">
-                    <button
-                      onClick={() => window.location.href = `/packages/${index + 1}`}
-                      className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 ${
-                        pkg.popular
-                          ? 'bg-amber-600 hover:bg-amber-700 text-white'
-                          : 'bg-gray-900 hover:bg-gray-800 text-white'
-                      }`}
-                    >
-                      Choose {pkg.name}
-                    </button>
-                  </td>
-                ))}
-              </tr>
             </tbody>
           </table>
         </div>
