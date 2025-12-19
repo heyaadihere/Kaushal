@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Check, Star, ArrowRight } from 'lucide-react';
+import { Check, Star, ArrowRight, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import PricingInquiryPopup from './PricingInquiryPopup';
 
 const Packages = () => {
   const [packagesData, setPackagesData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isPricingPopupOpen, setIsPricingPopupOpen] = useState(false);
 
   useEffect(() => {
     const fetchPackages = async () => {
