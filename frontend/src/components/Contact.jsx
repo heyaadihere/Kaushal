@@ -72,8 +72,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'hello@thekaushal.in',
-      href: 'mailto:hello@thekaushal.in'
+      content: 'contact@thekaushal.in',
+      href: 'mailto:contact@thekaushal.in'
     },
     {
       icon: MapPin,
