@@ -8,59 +8,50 @@ const ComparisonTool = () => {
     {
       name: "Saamanjasya",
       subtitle: "Foundational",
-      price: "₹15,000",
       sessions: 3,
       features: [
-        { name: "Guided Sessions (90 mins each)", included: true },
-        { name: "Financial Planning Framework", included: true },
+        { name: "Guided Sessions", included: true },
+        { name: "Financial Planning", included: true },
         { name: "Communication Basics", included: true },
-        { name: "Conflict Resolution Starter Kit", included: true },
+        { name: "Conflict Resolution", included: true },
         { name: "Digital Workbook", included: true },
-        { name: "Draft Partnership Accord", included: false },
-        { name: "Intimacy & Boundaries Module", included: false },
-        { name: "Career Alignment Framework", included: false },
-        { name: "Emotional Intelligence Training", included: false },
-        { name: "3-Month Follow-up Session", included: false },
-        { name: "Lifetime Access to Resources", included: false }
+        { name: "Partnership Accord", included: false },
+        { name: "Intimacy Module", included: false },
+        { name: "Career Alignment", included: false },
+        { name: "Follow-up Sessions", included: false }
       ]
     },
     {
       name: "Sammati",
       subtitle: "Consent & Clarity",
-      price: "₹28,000",
       sessions: 5,
       popular: true,
       features: [
-        { name: "Guided Sessions (90 mins each)", included: true },
-        { name: "Financial Planning Framework", included: true },
+        { name: "Guided Sessions", included: true },
+        { name: "Financial Planning", included: true },
         { name: "Communication Basics", included: true },
-        { name: "Conflict Resolution Starter Kit", included: true },
+        { name: "Conflict Resolution", included: true },
         { name: "Digital Workbook", included: true },
-        { name: "Draft Partnership Accord", included: true },
-        { name: "Intimacy & Boundaries Module", included: true },
-        { name: "Career Alignment Framework", included: true },
-        { name: "Emotional Intelligence Training", included: false },
-        { name: "3-Month Follow-up Session", included: false },
-        { name: "Lifetime Access to Resources", included: false }
+        { name: "Partnership Accord", included: true },
+        { name: "Intimacy Module", included: true },
+        { name: "Career Alignment", included: true },
+        { name: "Follow-up Sessions", included: false }
       ]
     },
     {
       name: "Sankalp",
       subtitle: "Commitment & Alignment",
-      price: "₹45,000",
       sessions: 8,
       features: [
-        { name: "Guided Sessions (90 mins each)", included: true },
-        { name: "Financial Planning Framework", included: true },
+        { name: "Guided Sessions", included: true },
+        { name: "Financial Planning", included: true },
         { name: "Communication Basics", included: true },
-        { name: "Conflict Resolution Starter Kit", included: true },
+        { name: "Conflict Resolution", included: true },
         { name: "Digital Workbook", included: true },
-        { name: "Draft Partnership Accord", included: true },
-        { name: "Intimacy & Boundaries Module", included: true },
-        { name: "Career Alignment Framework", included: true },
-        { name: "Emotional Intelligence Training", included: true },
-        { name: "3-Month Follow-up Session", included: true },
-        { name: "Lifetime Access to Resources", included: true }
+        { name: "Partnership Accord", included: true },
+        { name: "Intimacy Module", included: true },
+        { name: "Career Alignment", included: true },
+        { name: "Follow-up Sessions", included: true }
       ]
     }
   ];
