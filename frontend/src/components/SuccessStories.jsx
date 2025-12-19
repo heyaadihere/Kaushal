@@ -104,30 +104,6 @@ const SuccessStories = () => {
             </div>
           ))}
         </div>
-
-        {/* Image testimonial */}
-        <div className="mt-20 max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2">Hear From Our Couples</h3>
-            <p className="text-gray-600 text-lg">Real testimonials from couples who transformed their partnerships</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop&q=80"
-                alt="Happy couple testimonial"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1532456745301-b2c645d8b80d?w=800&h=600&fit=crop&q=80"
-                alt="Couple success story"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
