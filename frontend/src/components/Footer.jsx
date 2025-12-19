@@ -126,7 +126,7 @@ const Footer = () => {
               <p className="text-gray-500 text-xs">
                 Website powered by{' '}
                 <a 
-                  href="https://techbooktechnologies.com" 
+                  href="https://techbook.co.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-amber-500 hover:text-amber-400 transition-colors font-medium"
