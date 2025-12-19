@@ -57,37 +57,36 @@ const ComparisonTool = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Compare Our Packages</h2>
-          <p className="text-xl text-gray-600">Find the perfect fit for your partnership journey</p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Compare Our Packages</h2>
+          <p className="text-gray-600">Find the perfect fit for your partnership journey</p>
         </div>
 
-        <div className="max-w-7xl mx-auto overflow-x-auto">
-          <table className="w-full border-collapse">
+        <div className="max-w-5xl mx-auto overflow-x-auto">
+          <table className="w-full border-collapse bg-white rounded-xl shadow-sm">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="text-left p-6 font-semibold text-gray-900 text-lg">Features</th>
+                <th className="text-left p-4 font-semibold text-gray-900">Features</th>
                 {packages.map((pkg, index) => (
                   <th
                     key={index}
                     onMouseEnter={() => setHoveredPackage(index)}
                     onMouseLeave={() => setHoveredPackage(null)}
-                    className={`p-6 transition-all duration-300 ${
-                      hoveredPackage === index ? 'bg-amber-50 scale-105' : ''
+                    className={`p-4 transition-all duration-300 ${
+                      hoveredPackage === index ? 'bg-amber-50' : ''
                     } ${pkg.popular ? 'bg-amber-50' : ''}`}
                   >
                     <div className="text-center">
                       {pkg.popular && (
-                        <span className="inline-block px-3 py-1 bg-amber-500 text-white text-xs font-semibold rounded-full mb-2">
-                          Most Popular
+                        <span className="inline-block px-2 py-1 bg-amber-500 text-white text-xs font-semibold rounded-full mb-2">
+                          Popular
                         </span>
                       )}
-                      <div className="text-2xl font-bold text-gray-900 mb-1">{pkg.name}</div>
-                      <div className="text-sm text-amber-600 mb-2">{pkg.subtitle}</div>
-                      <div className="text-3xl font-bold text-amber-600">{pkg.price}</div>
-                      <div className="text-sm text-gray-600 mt-1">{pkg.sessions} Sessions</div>
+                      <div className="text-lg font-bold text-gray-900 mb-1">{pkg.name}</div>
+                      <div className="text-xs text-amber-600 mb-1">{pkg.subtitle}</div>
+                      <div className="text-sm text-gray-600">{pkg.sessions} Sessions</div>
                     </div>
                   </th>
                 ))}
