@@ -115,21 +115,55 @@ const Packages = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-300 mb-4">Not sure which package is right for you?</p>
-          <Button
-            onClick={() => {
-              const element = document.querySelector('#contact');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
-            variant="outline"
-            className="border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white px-8 py-6 text-lg rounded-full font-semibold backdrop-blur-md transition-all duration-300"
-          >
-            Book a Free Consultation
-          </Button>
+        {/* Contact for Pricing Section */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-3xl p-12 text-center shadow-2xl relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            
+            <div className="relative z-10">
+              <Mail className="w-16 h-16 text-white mx-auto mb-6 animate-bounce" />
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Interested in Our Packages?
+              </h3>
+              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                Get detailed pricing information and find the perfect package for your partnership journey. We'll send you comprehensive details tailored to your needs.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  onClick={() => setIsPricingPopupOpen(true)}
+                  className="bg-white text-amber-700 hover:bg-gray-100 px-8 py-6 text-lg rounded-full font-bold shadow-xl hover:scale-105 transition-all duration-300 group"
+                >
+                  <Mail className="mr-2 w-5 h-5" />
+                  Request Pricing Details
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button
+                  onClick={() => {
+                    const element = document.querySelector('#contact');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-white/10 hover:bg-white/20 text-white border-2 border-white px-8 py-6 text-lg rounded-full font-bold backdrop-blur-md transition-all duration-300"
+                >
+                  Book Free Consultation
+                </Button>
+              </div>
+
+              <p className="text-white/80 text-sm mt-6">
+                All inquiries sent to <span className="font-semibold">connect@thekaushal.in</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Pricing Inquiry Popup */}
+      <PricingInquiryPopup 
+        isOpen={isPricingPopupOpen} 
+        onClose={() => setIsPricingPopupOpen(false)} 
+      />
     </section>
   );
 };
