@@ -37,13 +37,16 @@ const Preloader = () => {
             <div className="w-48 h-48 border-4 border-transparent border-t-amber-600 border-r-orange-600 rounded-full animate-spin"></div>
           </div>
 
-          {/* Logo */}
+          {/* Logo with transparent background */}
           <div className="relative z-10 animate-bounce-slow">
-            <img 
-              src="/logo.png" 
-              alt="Kaushal Logo" 
-              className="h-32 w-auto mx-auto drop-shadow-2xl"
-            />
+            <div className="bg-transparent p-4 rounded-2xl">
+              <img 
+                src="/logo.png" 
+                alt="Kaushal Logo" 
+                className="h-32 w-auto mx-auto drop-shadow-2xl"
+                style={{ mixBlendMode: 'multiply' }}
+              />
+            </div>
           </div>
         </div>
 
