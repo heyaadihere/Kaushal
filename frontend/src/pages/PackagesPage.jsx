@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check, Star, ArrowRight } from 'lucide-react';
+import { Check, Star, ArrowRight, Mail } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { packagesData } from '../mock';
+import PricingInquiryPopup from '../components/PricingInquiryPopup';
 
 const PackagesPage = () => {
+  const [isPricingPopupOpen, setIsPricingPopupOpen] = useState(false);
   return (
     <div className="pt-20">
       {/* Hero Section */}
