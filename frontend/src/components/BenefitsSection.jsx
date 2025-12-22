@@ -108,15 +108,15 @@ const BenefitsSection = () => {
               <p className="text-sm text-white/90">Increase in relationship satisfaction</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-white mb-2">60%</div>
-              <p className="text-white/90">Reduction in divorce likelihood</p>
+              <div className="text-4xl font-bold text-white mb-2">60%</div>
+              <p className="text-sm text-white/90">Reduction in divorce likelihood</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-white mb-2">95%</div>
-              <p className="text-white/90">Would recommend to others</p>
+              <div className="text-4xl font-bold text-white mb-2">95%</div>
+              <p className="text-sm text-white/90">Would recommend to others</p>
             </div>
           </div>
-          <p className="text-white/80 text-center mt-8 italic">
+          <p className="text-white/80 text-center mt-6 italic text-sm">
             *Based on 5-year follow-up study with 500+ couples who completed our programs
           </p>
         </div>
