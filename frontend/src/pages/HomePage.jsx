@@ -10,7 +10,6 @@ import Services from '../components/Services';
 import InteractiveTimeline from '../components/InteractiveTimeline';
 import Process from '../components/Process';
 import ReadinessCalculator from '../components/ReadinessCalculator';
-import VideoGallery from '../components/VideoGallery';
 import Packages from '../components/Packages';
 import ComparisonTool from '../components/ComparisonTool';
 import SuccessStories from '../components/SuccessStories';
@@ -30,7 +29,6 @@ const HomePage = () => {
       <InteractiveTimeline />
       <Process />
       <ReadinessCalculator />
-      <VideoGallery />
       <Packages />
       <ComparisonTool />
       <SuccessStories />
