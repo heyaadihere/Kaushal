@@ -44,6 +44,21 @@ code {
 
 .animate-scale-in {
     animation: scale-in 0.4s ease-out;
+
+/* Preloader Animations */
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}
+
 }
 
 
