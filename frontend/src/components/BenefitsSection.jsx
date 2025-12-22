@@ -100,12 +100,12 @@ const BenefitsSection = () => {
         </div>
 
         {/* Research backing */}
-        <div className="mt-20 max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-10 border border-white/20">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Research-Backed Approach</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="mt-16 max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+          <h3 className="text-xl font-bold text-white mb-5 text-center">Research-Backed Approach</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <div className="text-5xl font-bold text-white mb-2">85%</div>
-              <p className="text-white/90">Increase in relationship satisfaction</p>
+              <div className="text-4xl font-bold text-white mb-2">85%</div>
+              <p className="text-sm text-white/90">Increase in relationship satisfaction</p>
             </div>
             <div>
               <div className="text-5xl font-bold text-white mb-2">60%</div>
