@@ -62,7 +62,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-amber-600 via-orange-600 to-amber-700 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-amber-600 via-orange-600 to-amber-700 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -70,14 +70,14 @@ const BenefitsSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Invest in Pre-Marital Preparation?</h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Why Invest in Pre-Marital Preparation?</h2>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">
             The data speaks for itself. Couples who invest in pre-marital preparation report significantly higher satisfaction and lower conflict rates.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
