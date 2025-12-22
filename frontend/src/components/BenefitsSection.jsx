@@ -83,16 +83,16 @@ const BenefitsSection = () => {
             return (
               <div
                 key={index}
-                className="card-3d bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group animate-scale-in stagger-${(index % 4) + 1} hover:shadow-2xl"
+                className="card-3d bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group animate-scale-in stagger-${(index % 4) + 1} hover:shadow-2xl"
               >
-                <div className="inline-flex p-4 rounded-xl bg-white/20 mb-6 group-hover:scale-110 transition-transform">
-                  <Icon className="w-8 h-8 text-white" />
+                <div className="inline-flex p-3 rounded-xl bg-white/20 mb-5 group-hover:scale-110 transition-transform">
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-white/90 leading-relaxed mb-6">{benefit.description}</p>
-                <div className="border-t border-white/20 pt-4">
-                  <div className="text-4xl font-bold text-white mb-1">{benefit.stat}</div>
-                  <div className="text-white/80 text-sm font-medium">{benefit.statLabel}</div>
+                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                <p className="text-sm text-white/90 leading-relaxed mb-5">{benefit.description}</p>
+                <div className="border-t border-white/20 pt-3">
+                  <div className="text-3xl font-bold text-white mb-1">{benefit.stat}</div>
+                  <div className="text-white/80 text-xs font-medium">{benefit.statLabel}</div>
                 </div>
               </div>
             );
