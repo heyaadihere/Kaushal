@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
 import Logo from './Logo';
 import { Button } from './ui/button';
 
@@ -8,14 +8,12 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  
-  // Check if we're on homepage
-  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -30,46 +28,52 @@ const Header = () => {
     { name: 'Contact', path: '/contact' }
   ];
 
+  const isActive = (path) => location.pathname === path;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || !isHomePage
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-lg py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Logo isScrolled={isScrolled || !isHomePage} />
-          </div>
+          <Link to="/">
+            <Logo isScrolled={isScrolled} />
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`font-medium transition-colors duration-200 relative group ${
-                  isScrolled || !isHomePage
-                    ? 'text-gray-700 hover:text-amber-600' 
+                className={`font-medium transition-colors duration-200 ${
+                  isScrolled
+                    ? isActive(link.path)
+                      ? 'text-amber-600'
+                      : 'text-gray-900 hover:text-amber-600'
+                    : isActive(link.path)
+                    ? 'text-amber-400'
                     : 'text-white hover:text-amber-400'
-                } ${location.pathname === link.path ? ((isScrolled || !isHomePage) ? 'text-amber-600' : 'text-amber-400') : ''}`}
+                }`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
-                  isScrolled || !isHomePage ? 'bg-amber-600' : 'bg-white'
-                } ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
             ))}
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:block">
             <Link to="/contact">
-              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
-                <Phone className="w-4 h-4 mr-2" />
+              <Button
+                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 ${
+                  isScrolled
+                    ? 'bg-amber-600 hover:bg-amber-700 text-white'
+                    : 'bg-white text-amber-700 hover:bg-gray-100'
+                }`}
+              >
                 Book Consultation
               </Button>
             </Link>
@@ -78,31 +82,38 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-gray-700 hover:text-amber-600 transition-colors"
+            className={`lg:hidden p-2 rounded-md transition-colors ${
+              isScrolled ? 'text-gray-900' : 'text-white'
+            }`}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200 py-4 mb-4 rounded-b-xl shadow-xl">
-            <nav className="flex flex-col gap-4">
+          <div className="lg:hidden mt-4 pb-4 bg-white rounded-lg shadow-xl">
+            <nav className="flex flex-col space-y-4 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-gray-700 hover:text-amber-600 font-medium px-4 py-2 transition-colors ${
-                    location.pathname === link.path ? 'text-amber-600 bg-amber-50' : ''
+                  className={`font-medium transition-colors duration-200 ${
+                    isActive(link.path)
+                      ? 'text-amber-600'
+                      : 'text-gray-900 hover:text-amber-600'
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white mx-4 py-2 rounded-full font-medium">
-                  <Phone className="w-4 h-4 mr-2" />
+              <Link to="/contact">
+                <Button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-full bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full font-semibold"
+                >
                   Book Consultation
                 </Button>
               </Link>

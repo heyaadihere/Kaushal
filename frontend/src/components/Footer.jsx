@@ -29,8 +29,8 @@ const Footer = () => {
 
   const socialLinks = [
     { Icon: Facebook, href: '#', label: 'Facebook' },
-    { Icon: Instagram, href: '#', label: 'Instagram' },
-    { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { Icon: Instagram, href: 'https://www.instagram.com/kaushalitsaskill/', label: 'Instagram' },
+    { Icon: Linkedin, href: 'https://www.linkedin.com/company/kaushal-it-s-a-skill/', label: 'LinkedIn' },
     { Icon: Twitter, href: '#', label: 'Twitter' }
   ];
 
@@ -143,6 +143,8 @@ const Footer = () => {
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-10 h-10 rounded-full bg-gray-700 hover:bg-amber-600 flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 hover:scale-110"
                 >
