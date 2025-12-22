@@ -21,6 +21,7 @@ import BlogDetailPage from "./pages/BlogDetailPage";
 function App() {
   return (
     <BrowserRouter>
+      <Preloader />
       <div className="App">
         <Header />
         <main>
