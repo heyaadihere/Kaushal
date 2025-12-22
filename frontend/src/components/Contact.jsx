@@ -72,8 +72,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@thekaushal.in',
-      href: 'mailto:contact@thekaushal.in'
+      content: 'connect@thekaushal.in',
+      href: 'mailto:connect@thekaushal.in'
     },
     {
       icon: MapPin,
@@ -215,13 +215,15 @@ const Contact = () => {
             {/* Additional CTA */}
             <div className="bg-amber-600/20 backdrop-blur-md rounded-xl p-6 border border-amber-500/30">
               <h4 className="text-white font-bold text-xl mb-2">Prefer a Quick Call?</h4>
-              <p className="text-gray-300 mb-4">Book a 15-minute clarity session with our team.</p>
-              <Button
-                className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Schedule Call
-              </Button>
+              <p className="text-gray-300 mb-4">Speak directly with our team now.</p>
+              <a href="tel:+919873333620">
+                <Button
+                  className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
             </div>
           </div>
         </div>
