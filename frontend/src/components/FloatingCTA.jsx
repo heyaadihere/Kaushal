@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 
 const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,11 +26,6 @@ const FloatingCTA = () => {
     setIsVisible(false);
   };
 
-  const handleClick = () => {
-    const element = document.querySelector('#contact');
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
-  };
-
   if (!isVisible) return null;
 
   return (
@@ -46,13 +42,14 @@ const FloatingCTA = () => {
         {/* Main CTA Button */}
         <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6 rounded-2xl shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-105 max-w-xs">
           <p className="text-sm font-medium mb-3">Ready to strengthen your partnership?</p>
-          <Button
-            onClick={handleClick}
-            className="w-full bg-white hover:bg-gray-100 text-amber-700 font-semibold py-3 rounded-full transition-colors"
-          >
-            <Phone className="w-4 h-4 mr-2" />
-            Book Free Consultation
-          </Button>
+          <Link to="/contact">
+            <Button
+              className="w-full bg-white hover:bg-gray-100 text-amber-700 font-semibold py-3 rounded-full transition-colors"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Book Free Consultation
+            </Button>
+          </Link>
         </div>
 
         {/* Pulsing Ring */}
